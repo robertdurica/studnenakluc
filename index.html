@@ -7,135 +7,801 @@
   --bg:#0b1520;
   --bg2:#102031;
   --card:rgba(255,255,255,.08);
+  --card2:rgba(255,255,255,.12);
   --text:#eef6ff;
   --muted:rgba(238,246,255,.82);
   --accent:#1ea7ff;
-  --green:#22c55e;
+  --accent2:#0c7ed6;
   --border:rgba(255,255,255,.16);
   --shadow:0 18px 50px rgba(0,0,0,.28);
   --radius:24px;
 }
 
-/* IKONY */
-.check::before{
-  content:"✔ ";
-  color:var(--green);
-  font-weight:900;
-}
-
-.drop::before{
-  content:"💧 ";
-}
-
+/* NOVÉ: zvýraznenie ceny */
 .hero-price{
-  font-size:clamp(26px,4vw,36px);
+  display:inline-block;
+  margin:12px 0 18px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg, rgba(30,167,255,.18), rgba(12,126,214,.24));
+  border:1px solid rgba(30,167,255,.28);
+  color:#fff;
+  font-size:clamp(22px,3vw,30px);
   font-weight:900;
-  color:#1ea7ff;
-  margin:10px 0 20px;
+  box-shadow:0 10px 28px rgba(30,167,255,.18);
 }
 
-/* HERO */
+.price-box{
+  margin:28px 0 24px;
+  padding:22px 24px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(30,167,255,.14), rgba(12,126,214,.18));
+  border:1px solid rgba(30,167,255,.24);
+  text-align:center;
+  font-size:24px;
+  font-weight:900;
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+
+#vizitka-hero, #vizitka-hero * , .section, .section *{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+a{
+  color:inherit;
+}
+
 #vizitka-hero{
   min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),
+  background-image:
+    linear-gradient(rgba(0,0,0,.46), rgba(0,0,0,.68)),
     url("https://www.studnenakluc.sk/wp-content/uploads/2026/02/A_digital_illustration_showcases_an_underwater_dig.png.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:100px 20px;
+  padding:120px 20px 72px;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+#vizitka-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top, rgba(30,167,255,.16), transparent 45%);
+  pointer-events:none;
+}
+
+#vizitka-hero > *{
+  position:relative;
+  z-index:1;
+}
+
+#vizitka-hero img{
+  width:150px;
+  max-width:150px;
+  height:auto;
+  margin-bottom:28px;
+  filter:drop-shadow(0 0 25px rgba(30,167,255,.55));
+  transition:transform .35s ease;
+}
+
+#vizitka-hero img:hover{
+  transform:scale(1.04);
 }
 
 #vizitka-hero h1{
   font-size:clamp(32px,5vw,56px);
+  line-height:1.05;
+  margin:0 0 10px;
+  font-weight:800;
+  letter-spacing:-.03em;
 }
 
-/* BUTTON */
-.vizitka-phone{
-  padding:18px 40px;
-  border-radius:40px;
-  background:#1ea7ff;
+#vizitka-hero .hero-subtitle{
+  margin:0 0 14px;
+  font-size:clamp(17px,2vw,20px);
+  color:var(--muted);
+}
+
+#vizitka-hero .hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:0 0 34px;
+}
+
+#vizitka-hero .hero-badge{
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(8px);
+  font-size:14px;
+  color:#fff;
+}
+
+.vizitka-menu{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px;
+  width:100%;
+  max-width:560px;
+  margin-bottom:32px;
+}
+
+.vizitka-menu a{
+  padding:18px 16px;
+  border-radius:18px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.18);
   color:#fff;
   text-decoration:none;
-  font-weight:800;
+  font-weight:700;
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+  backdrop-filter:blur(8px);
 }
 
-/* SECTION */
+.vizitka-menu a:hover{
+  background:rgba(30,167,255,.95);
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(30,167,255,.35);
+}
+
+.vizitka-phone{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px 42px 18px 70px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--accent), var(--accent2));
+  color:#fff;
+  font-weight:800;
+  font-size:20px;
+  line-height:1;
+  text-decoration:none !important;
+  white-space:nowrap;
+  box-shadow:0 14px 34px rgba(30,167,255,.32);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.vizitka-phone::before{
+  content:"📞";
+  position:absolute;
+  left:32px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:22px;
+}
+
+.vizitka-phone:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 42px rgba(30,167,255,.45);
+}
+
 .section{
-  padding:80px 20px;
+  padding:92px 20px;
+  background:linear-gradient(180deg, var(--bg2), #0d1824);
+  color:#fff;
+  scroll-margin-top:84px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+.section:nth-of-type(even){
+  background:linear-gradient(180deg, #0f1b29, #0c1621);
 }
 
 .section-inner{
-  max-width:1000px;
-  margin:auto;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.section h2{
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.1;
+  margin:0 0 16px;
+  letter-spacing:-.03em;
+}
+
+.section h3{
+  font-size:clamp(20px,2.6vw,26px);
+  margin:30px 0 12px;
+}
+
+.section p{
+  font-size:17px;
+  line-height:1.8;
+  color:var(--muted);
+  max-width:900px;
+  margin:0 0 14px;
+}
+
+.section strong{
+  color:#fff;
+}
+
+.lead{
+  font-size:18px;
+  max-width:960px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:18px;
+  margin-top:30px;
 }
 
 .feature-card{
-  background:#132538;
-  padding:20px;
-  border-radius:15px;
-  margin-bottom:15px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
 }
 
-.price-box{
-  background:#1ea7ff;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  font-size:26px;
-  font-weight:bold;
-  margin:30px 0;
+.feature-card h3{
+  margin-top:0;
+  margin-bottom:10px;
 }
 
-/* GRID */
-.feature-grid{
+.feature-card p{
+  margin-bottom:0;
+}
+
+.media-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:16px;
+  margin:22px 0 8px;
 }
 
+.media-grid img{
+  width:100%;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:var(--shadow);
+  display:block;
+}
+
+.kontakt-box{
+  margin-top:24px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:flex-start;
+}
+
+.kontakt-box a{
+  color:#7fd0ff;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.kontakt-box a:hover{
+  text-decoration:underline;
+}
+
+.cta-strip{
+  margin-top:30px;
+  padding:22px;
+  border-radius:22px;
+  background:linear-gradient(135deg, rgba(30,167,255,.12), rgba(12,126,214,.16));
+  border:1px solid rgba(30,167,255,.18);
+  box-shadow:var(--shadow);
+  display:flex;
+  gap:16px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.cta-strip h3{
+  margin:0;
+}
+
+.cta-strip p{
+  margin:6px 0 0;
+  max-width:none;
+}
+
+.cta-strip .cta-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:999px;
+  background:linear-gradient(135deg, var(--accent), var(--accent2));
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  white-space:nowrap;
+  box-shadow:0 10px 26px rgba(30,167,255,.3);
+}
+
+.mapa-wrapper{
+  margin-top:26px;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+#mapa-posobnosti{
+  height:460px;
+  width:100%;
+  background:#0b1520;
+}
+
+ul.clean-list{
+  list-style:none;
+  padding:0;
+  margin:18px 0 0;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:12px;
+}
+
+ul.clean-list li{
+  padding:14px 16px;
+  border-radius:16px;
+  background:var(--card);
+  border:1px solid var(--border);
+  color:var(--text);
+}
+
+.faq{
+  display:grid;
+  gap:14px;
+  margin-top:24px;
+}
+
+.faq-item{
+  padding:20px 22px;
+  border-radius:20px;
+  background:var(--card);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.faq-item h3{
+  margin:0 0 8px;
+}
+
+.footer-note{
+  margin-top:22px;
+  font-size:15px;
+  color:rgba(238,246,255,.7);
+}
+
+@media (max-width: 900px){
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  ul.clean-list{
+    grid-template-columns:1fr;
+  }
+
+  .media-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 767px){
+  #vizitka-hero{
+    padding:100px 16px 64px;
+    min-height:auto;
+  }
+
+  #vizitka-hero img{
+    width:132px;
+    max-width:132px;
+  }
+
+  .vizitka-menu{
+    grid-template-columns:1fr 1fr;
+    max-width:100%;
+  }
+
+  .vizitka-phone{
+    width:100%;
+    max-width:360px;
+    font-size:18px;
+    padding:16px 22px 16px 64px;
+  }
+
+  .vizitka-phone::before{
+    left:26px;
+  }
+
+  .section{
+    padding:72px 16px;
+  }
+}
 </style>
 
 <section id="vizitka-hero">
-  <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/ChatGPT-Image-27.-1.-2026-09_15_41.png" width="140">
-
+  <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/ChatGPT-Image-27.-1.-2026-09_15_41.png" alt="Studne na kľúč" loading="eager">
   <h1>Vŕtanie studní na kľúč</h1>
-  <p>Banskobystrický kraj</p>
+  <p class="hero-subtitle">Banskobystrický kraj</p>
 
-  <div class="hero-price drop">60€ / meter</div>
+  <div class="hero-price">💧 60€ / meter</div>
 
-  <a class="vizitka-phone" href="tel:+421909163189">📞 0909 163 189</a>
+  <div class="hero-badges" aria-label="Hlavné výhody">
+    <span class="hero-badge">Vŕtanie studní</span>
+    <span class="hero-badge">Čistenie studní</span>
+    <span class="hero-badge">Zapájanie čerpadiel</span>
+    <span class="hero-badge">Rýchla realizácia</span>
+  </div>
+
+  <div class="vizitka-menu">
+    <a href="#vrtanie">Vŕtanie</a>
+    <a href="#cistenie">Čistenie</a>
+    <a href="#zapajanie">Zapájanie</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+
+  <a class="vizitka-phone" href="tel:+421909163189">0909&nbsp;163&nbsp;189</a>
+</section>
+
+<section class="section" aria-labelledby="why-title">
+  <div class="section-inner">
+    <h2 id="why-title">Spoľahlivé riešenie pre vlastný zdroj vody</h2>
+    <p class="lead">
+      Zabezpečujeme profesionálne <strong>vŕtanie studní na kľúč</strong>, čistenie studní aj kompletné zapojenie čerpacej techniky.
+      Pracujeme precízne, s dôrazom na kvalitu vrtu, čistotu pracoviska a dlhú životnosť celého systému.
+    </p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Kompletná realizácia</h3>
+        <p>Od prvotného vrtu cez vystrojenie až po finálne zapojenie a odskúšanie systému v domácnosti.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Moderná technika</h3>
+        <p>Používame výkonnú vrtnú a kompresorovú technológiu, ktorá zvláda aj náročnejšie geologické podmienky.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Lokálna pôsobnosť</h3>
+        <p>Najčastejšie realizujeme zákazky v rámci Banskobystrického kraja a priľahlých obcí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vrtanie" class="section">
+  <div class="section-inner">
+    <h2>Vŕtanie studní na kľúč</h2>
+
+    <div class="price-box">💧 Cena vŕtania: 60€ / meter</div>
+
+    <p>
+      Realizujeme profesionálne <strong>vrtanie studní v Banskobystrickom kraji</strong> modernou technikou a s dôrazom na kvalitu,
+      čistotu a dlhú životnosť studne.
+    </p>
+    <p>
+      Používame <strong>vrtnú súpravu Sanrock SR200</strong> v kombinácii s výkonným <strong>kompresorom ATLAS COPCO XAS 238-14</strong>,
+      vďaka čomu zvládame aj náročné geologické podmienky.
+    </p>
+
+    <div class="media-grid">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/Snimka-obrazovky-2026-02-09-203104-300x207.png" alt="Vrtná súprava pri práci" loading="lazy">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/XAS238_kompresor_web.jpg" alt="Kompresor Atlas Copco XAS 238-14" loading="lazy">
+    </div>
+
+    <p>
+      Studne vystrojujeme výhradne <strong>závitovými PVC studničnými rúrami svetovej kvality</strong>, vrátane
+      <strong>strojovo perforovaných rúr</strong>, ktoré zabezpečujú optimálny prítok vody a dlhodobú funkčnosť.
+      Vonkajší priemer používame 140&nbsp;mm, na objednávku je možné osadiť aj 160&nbsp;mm.
+      Rúry sú obsypané premývaným riečnym štrkom a v potrebných miestach sú spravené bentonitové zátky, aby sme zabránili kontaminácii povrchovou vodou.
+    </p>
+    <p>
+      Najčastejšie realizujeme vrty v hĺbke <strong>50–70 metrov</strong>, výnimočne až do <strong>100 metrov</strong>, podľa miestnych podmienok.
+    </p>
+    <p>
+      Po ukončení prác <strong>pracovisko vždy upraceme</strong> a odovzdávame ho v pôvodnom stave.
+    </p>
+
+    <div class="cta-strip">
+      <div>
+        <h3>Chcete cenovú ponuku na vrt?</h3>
+        <p>Zavolajte a preberieme lokalitu, predpokladanú hĺbku aj vhodný postup.</p>
+      </div>
+      <a class="cta-link" href="tel:+421909163189">Zavolať teraz</a>
+    </div>
+  </div>
 </section>
 
 <section class="section">
-<div class="section-inner">
+  <div class="section-inner">
+    <h2>Oblasť pôsobenia</h2>
+    <p>
+      Realizujeme vŕtanie studní, čistenie a zapájanie hlavne v rámci Banskobystrického kraja.
+      Skúsenosti máme v nasledujúcich mestách a ich okolí:
+    </p>
 
-<h2 class="drop">Spoľahlivé riešenie vody</h2>
+    <ul class="clean-list" aria-label="Mestá pôsobenia">
+      <li>Detva</li>
+      <li>Zvolen</li>
+      <li>Banská Bystrica</li>
+      <li>Brezno</li>
+      <li>Veľký Krtíš</li>
+      <li>Žarnovica</li>
+      <li>Žiar nad Hronom</li>
+      <li>Krupina</li>
+      <li>Podbrezová</li>
+      <li>Valaská</li>
+      <li>Horná Lehota</li>
+      <li>Dolná Lehota</li>
+      <li>Lopej</li>
+      <li>Nemecká</li>
+      <li>Hriňová</li>
+      <li>Očová</li>
+      <li>Hodruša-Hámre</li>
+      <li>Vyhne</li>
+    </ul>
 
-<div class="price-box drop">
-60€ za meter
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-  <h3 class="check">Kompletná realizácia</h3>
-  <p>Od vrtu až po zapojenie.</p>
-</div>
-
-<div class="feature-card">
-  <h3 class="check">Moderná technika</h3>
-  <p>Výkonné vrtné stroje.</p>
-</div>
-
-<div class="feature-card">
-  <h3 class="check">Rýchla realizácia</h3>
-  <p>Bez zbytočných prieťahov.</p>
-</div>
-
-</div>
-
-</div>
+    <div class="mapa-wrapper">
+      <div id="mapa-posobnosti" aria-label="Mapa oblastí pôsobenia"></div>
+    </div>
+  </div>
 </section>
+
+<section id="cistenie" class="section">
+  <div class="section-inner">
+    <h2>Čistenie studní</h2>
+    <p>
+      Zanesená studňa môže spôsobovať slabý prítok vody, piesok vo vode alebo zhoršenú kvalitu vody, čo vie spôsobiť veľké problémy.
+      Pomocou profesionálnej techniky vieme studňu efektívne vyčistiť alebo obnoviť jej funkčnosť.
+    </p>
+
+    <h3>Mechanické čistenie – AIRLIFT</h3>
+    <p>
+      Najúčinnejší spôsob čistenia vŕtaných studní. Do vrtu sa spustí špeciálne potrubie a pomocou výkonného kompresora sa vháňa vzduch,
+      ktorý vyplavuje piesok, kaly a usadeniny zo studne.
+    </p>
+    <p>
+      Výsledok je viditeľný okamžite – zo studne vytekajú nečistoty, ktoré sa postupne odstránia až do úplného prečistenia vrtu.
+    </p>
+
+    <h3>Čistenie vretenovým čerpadlom</h3>
+    <p>
+      Po vyvŕtaní nového vrtu a prečistení metódou airlift osadzujeme vretenové čerpadlo, ktoré vrt dočistí a stabilizuje.
+    </p>
+    <p>
+      Až po úplnom vyčistení je možné osadiť finálne čerpadlo, ktoré zabezpečí spoľahlivú prevádzku studne na dlhé roky.
+    </p>
+  </div>
+</section>
+
+<section id="zapajanie" class="section">
+  <div class="section-inner">
+    <h2>Zapájanie studní</h2>
+    <p>
+      Po profesionálnom vyčistení studne nasleduje správne zapojenie celého systému.
+      Kvalitná montáž je kľúčová pre dlhú životnosť studne aj čerpadla.
+    </p>
+
+    <h3>Voľba a osadenie čerpadla</h3>
+    <p>
+      Čerpadlo osádzame minimálne 4–6 metrov nad dnom vrtu, aby nenasávalo sediment.
+      Používame výhradne nerezové závesné lanká, ktoré nepodliehajú korózii.
+    </p>
+
+    <h3>Technické istenie</h3>
+    <p>
+      Súčasťou zapojenia je spätná klapka a ochrana proti chodu na sucho pomocou hladinových sond alebo frekvenčného meniča.
+    </p>
+
+    <h3>Napojenie do domu</h3>
+    <p>
+      Kontrolujeme tlak v tlakovej nádobe a osádzame mechanický filter na ochranu rozvodov a spotrebičov.
+    </p>
+
+    <h3>Finálne prepláchnutie</h3>
+    <p>
+      Pred používaním vody v domácnosti nechávame systém preplachovať, aby sa odstránili zvyšky nečistôt a zákalu.
+    </p>
+
+    <div class="media-grid">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/sachta-montaz11-300x226.png" alt="Montáž studne a technologickej šachty" loading="lazy">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/tn_zoom_obrazek_39-300x225.jpg" alt="Zapájanie čerpadla do studne" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <h2>Najčastejšie otázky</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Koľko trvá realizácia studne?</h3>
+        <p>Čas závisí od lokality, hĺbky vrtu a podmienok v teréne. Presný postup vieme určiť po telefonickej konzultácii.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Robíte aj servis už existujúcich studní?</h3>
+        <p>Áno, vieme pomôcť s čistením, kontrolou prietoku, zapojením aj obnovením funkčnosti staršej studne.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Pôsobíte aj mimo Banskobystrického kraja?</h3>
+        <p>Primárne pracujeme v Banskobystrickom kraji, ale pri väčších zákazkách sa vieme dohodnúť aj na širšom okolí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="section">
+  <div class="section-inner">
+    <h2>Kontakt</h2>
+    <p>
+      Máte záujem o vŕtanie studne, čistenie alebo zapojenie? Kontaktujte nás telefonicky, radi vám poradíme.
+    </p>
+
+    <div class="kontakt-box">
+      <a href="tel:+421909163189">📞 +421 909 163 189</a>
+      <a href="mailto:info@studnenakluc.sk">✉️ info@studnenakluc.sk</a>
+    </div>
+
+    <div class="media-grid" style="margin-top:26px;">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/vizitka-cool-1-300x168.png" alt="Vizitka Studne na kľúč" loading="lazy">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/ChatGPT-Image-27.-1.-2026-09_15_41.png" alt="Logo Studne na kľúč" loading="lazy">
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <h3>Najrýchlejší kontakt je telefonicky</h3>
+        <p>Ak potrebujete rýchlo prebrať vrt, hĺbku alebo cenu, zavolajte priamo.</p>
+      </div>
+      <a class="cta-link" href="tel:+421909163189">Zavolať</a>
+    </div>
+
+    <div class="footer-note">Formulár zo stránky zostáva zachovaný nižšie.</div>
+    <div style="margin-top:18px;">[sureforms id='419']</div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var mapContainer = document.getElementById('mapa-posobnosti');
+  if (!mapContainer || typeof L === 'undefined') return;
+
+  var mapa = L.map('mapa-posobnosti', {
+    scrollWheelZoom: false
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+  }).addTo(mapa);
+
+  var studnaIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32]
+  });
+
+  var mesta = [
+    ["Detva", 48.558, 19.419],
+    ["Zvolen", 48.576, 19.127],
+    ["Banská Bystrica", 48.736, 19.146],
+    ["Brezno", 48.806, 19.637],
+    ["Veľký Krtíš", 48.210, 19.353],
+    ["Žarnovica", 48.482, 18.715],
+    ["Žiar nad Hronom", 48.588, 18.860],
+    ["Krupina", 48.355, 19.064],
+    ["Podbrezová", 48.812, 19.600],
+    ["Valaská", 48.805, 19.568],
+    ["Horná Lehota", 48.862, 19.583],
+    ["Dolná Lehota", 48.852, 19.543],
+    ["Lopej", 48.793, 19.613],
+    ["Nemecká", 48.802, 19.440],
+    ["Horná Mičiná", 48.686, 19.215],
+    ["Dolná Mičiná", 48.680, 19.197],
+    ["Lukavica", 48.609, 19.097],
+    ["Očová", 48.596, 19.303],
+    ["Hriňová", 48.574, 19.532],
+    ["Látky", 48.623, 19.728],
+    ["Kokava nad Rimavicou", 48.614, 19.834],
+    ["Detvianska Huta", 48.586, 19.566],
+    ["Korytárky", 48.543, 19.447],
+    ["Kriváň", 48.531, 19.371],
+    ["Slatinské Lazy", 48.531, 19.319],
+    ["Klokoč", 48.507, 19.402],
+    ["Stožok", 48.514, 19.362],
+    ["Banská Štiavnica", 48.459, 18.894],
+    ["Hodruša-Hámre", 48.484, 18.804],
+    ["Vyhne", 48.498, 18.807]
+  ];
+
+  var cluster = L.markerClusterGroup();
+  var bounds = [];
+
+  mesta.forEach(function (m) {
+    cluster.addLayer(
+      L.marker([m[1], m[2]], { icon: studnaIcon })
+        .bindPopup("<strong>" + m[0] + "</strong>")
+    );
+    bounds.push([m[1], m[2]]);
+  });
+
+  mapa.addLayer(cluster);
+  mapa.fitBounds(bounds, { padding: [40, 40] });
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Studne na kľúč",
+  "url": "https://www.studnenakluc.sk",
+  "telephone": "+421909163189",
+  "areaServed": "Banskobystrický kraj",
+  "description": "Vŕtanie studní na kľúč, čistenie studní a zapájanie studní v Banskobystrickom kraji.",
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Koľko trvá realizácia studne?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Čas závisí od lokality, hĺbky vrtu a podmienok v teréne. Presný postup vieme určiť po telefonickej konzultácii."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Robíte aj servis už existujúcich studní?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Áno, vieme pomôcť s čistením, kontrolou prietoku, zapojením aj obnovením funkčnosti staršej studne."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pôsobíte aj mimo Banskobystrického kraja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Primárne pracujeme v Banskobystrickom kraji, ale pri väčších zákazkách sa vieme dohodnúť aj na širšom okolí."
+      }
+    }
+  ]
+}
+</script>
