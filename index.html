@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Vŕtanie studní na kľúč | Banskobystrický kraj</title>
+<meta name="description" content="Vŕtanie studní na kľúč v Banskobystrickom kraji. Profesionálne vrty, čistenie studní a zapájanie čerpadiel.">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f1d2b;
+  color:#fff;
+}
+
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
+    url("https://www.studnenakluc.sk/wp-content/uploads/2026/02/A_digital_illustration_showcases_an_underwater_dig.png.png") center/cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{font-size:42px;margin-bottom:10px}
+
+.btn{
+  background:#1ea7ff;
+  padding:15px 25px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  margin-top:20px;
+  display:inline-block;
+}
+
+.section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+}
+
+h2{font-size:30px;margin-bottom:15px}
+
+#mapa{
+  height:400px;
+  margin-top:20px;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Vŕtanie studní na kľúč</h1>
+  <p>Banskobystrický kraj</p>
+  <a href="tel:+421909163189" class="btn">📞 Zavolať</a>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Vŕtanie studní</h2>
+<p>Profesionálne vrtanie studní pomocou modernej techniky.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Oblasť pôsobenia</h2>
+<div id="mapa"></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Čistenie studní</h2>
+<p>Efektívne čistenie studní AIRLIFT technológiou.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Zapájanie studní</h2>
+<p>Kompletné zapojenie čerpadiel a systémov.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Kontakt</h2>
+<p>📞 +421 909 163 189</p>
+</div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+var map=L.map('mapa').setView([48.736,19.146],9);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+L.marker([48.736,19.146]).addTo(map);
+</script>
+
+</body>
+</html>
