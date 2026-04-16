@@ -3,170 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vŕtanie studní Detva</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<title>Vŕtanie studní Detva – Studne na kľúč | 60€ / meter</title>
+
+<meta name="description" content="Vŕtanie studní Detva a okolie. Studne na kľúč, čistenie studní, zapojenie čerpadiel. Cena 60€ za meter. Rýchla realizácia.">
+<meta name="keywords" content="vrtanie studni detva, studna detva, studne na kluc detva, vrtanie studni cena detva">
 
 <style>
-:root{
-  --bg:#0b1520;
-  --bg2:#102031;
-  --card:rgba(255,255,255,.08);
-  --text:#eef6ff;
-  --muted:rgba(238,246,255,.82);
-  --accent:#1ea7ff;
-  --accent2:#0c7ed6;
-  --green:#22c55e;
-  --border:rgba(255,255,255,.16);
-}
-
 body{
   margin:0;
-  font-family:Arial;
-  background:var(--bg);
-  color:var(--text);
+  font-family:Arial, sans-serif;
+  background:#0b1520;
+  color:#fff;
+  line-height:1.6;
 }
 
 section{
-  padding:80px 20px;
-}
-
-.container{
+  padding:60px 20px;
   max-width:1100px;
   margin:auto;
 }
 
-h1{font-size:48px;}
-h2{font-size:34px;}
-
-p{
-  font-size:18px;
-  line-height:1.7;
-  color:var(--muted);
+h1,h2,h3{
+  margin-bottom:15px;
 }
 
-/* HERO */
 .hero{
   text-align:center;
+  background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)),
+  url("A_digital_illustration_showcases_an_underwater_dig.png.png");
+  background-size:cover;
   padding:120px 20px;
-  background:
-  linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
-  url("https://www.studnenakluc.sk/wp-content/uploads/2026/02/A_digital_illustration_showcases_an_underwater_dig.png.png") center/cover;
 }
 
 .hero img{
-  width:200px;
+  width:180px;
   margin-bottom:20px;
 }
 
 .price{
+  font-size:32px;
+  font-weight:bold;
+  color:#1ea7ff;
+}
+
+.btn{
   display:inline-block;
-  margin:15px 0;
-  padding:14px 24px;
-  border-radius:50px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  font-size:26px;
-  font-weight:bold;
-}
-
-.menu{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  max-width:500px;
-  margin:20px auto;
-}
-
-.menu a{
-  background:rgba(255,255,255,.1);
-  padding:16px;
-  border-radius:12px;
+  margin-top:20px;
+  padding:15px 25px;
+  background:#1ea7ff;
+  color:#fff;
   text-decoration:none;
-  color:white;
+  border-radius:30px;
   font-weight:bold;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:20px;
-}
-
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:16px;
-}
-
-/* IMAGES */
-.images{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+.box{
+  background:#102031;
+  padding:25px;
+  border-radius:15px;
   margin-top:20px;
 }
 
-.images img{
-  width:100%;
-  border-radius:14px;
-}
-
-/* LIST */
-.list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.list div{
-  background:var(--card);
-  padding:14px;
-  border-radius:12px;
-}
-
-/* FORM */
-form{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  max-width:500px;
-}
-
 input, textarea{
-  padding:14px;
-  border-radius:10px;
+  width:100%;
+  padding:12px;
+  margin-bottom:10px;
   border:none;
+  border-radius:8px;
 }
 
 button{
-  padding:16px;
+  padding:15px;
+  background:#1ea7ff;
   border:none;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:white;
+  color:#fff;
   font-weight:bold;
-}
-
-/* STICKY CALL */
-.call{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:var(--green);
-  color:white;
-  padding:16px 20px;
-  border-radius:50px;
-  font-weight:bold;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  h1{font-size:34px;}
-  .grid{grid-template-columns:1fr;}
-  .images{grid-template-columns:1fr;}
-  .list{grid-template-columns:1fr;}
+  border-radius:10px;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -175,121 +89,73 @@ button{
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/ChatGPT-Image-27.-1.-2026-09_15_41.png">
-  <h1>Vŕtanie studní na kľúč</h1>
-  <p>Banskobystrický kraj</p>
-
-  <div class="price">💧 60€ / meter</div>
-
-  <div class="menu">
-    <a href="#vrtanie">🛠️ Vŕtanie</a>
-    <a href="#cistenie">💦 Čistenie</a>
-    <a href="#zapajanie">⚙️ Zapájanie</a>
-    <a href="#kontakt">📞 Kontakt</a>
-  </div>
+  <img src="ChatGPT-Image-27.-1.-2026-09_15_41.png">
+  <h1>Vŕtanie studní Detva</h1>
+  <p>Studne na kľúč – Banskobystrický kraj</p>
+  <div class="price">60€ / meter</div>
+  <a href="tel:+421909163189" class="btn">Zavolať</a>
 </section>
 
-<!-- VRTANIE -->
-<section id="vrtanie">
-  <div class="container">
-    <h2>🛠️ Vŕtanie studní na kľúč</h2>
-
-    <div class="price">60€ / meter</div>
-
-    <p>
-      Realizujeme profesionálne vrtanie studní modernou technikou.
-      Používame výkonnú vrtnú súpravu a kompresor, zvládame aj náročné podmienky.
-    </p>
-
-    <div class="images">
-      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/Snimka-obrazovky-2026-02-09-203104-300x207.png">
-      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/XAS238_kompresor_web.jpg">
-    </div>
-
-    <p>
-      Hĺbky vrtov najčastejšie 50–70m, maximálne až 100m.
-      Pracovisko po dokončení vždy upraceme.
-    </p>
-  </div>
-</section>
-
-<!-- SLUZBY -->
+<!-- SEO TEXT -->
 <section>
-  <div class="container">
-    <h2>💧 Služby</h2>
+  <h2>Vŕtanie studní Detva – spoľahlivý zdroj vody</h2>
 
-    <div class="grid">
-      <div class="card">✅ Kompletné riešenie</div>
-      <div class="card">🚛 Rýchla realizácia</div>
-      <div class="card">📍 Banskobystrický kraj</div>
-    </div>
-  </div>
+  <p>
+  Realizujeme profesionálne <strong>vrtanie studní v Detve</strong> a okolí.
+  Zabezpečujeme kompletné <strong>studne na kľúč</strong> vrátane čistenia a zapojenia čerpadiel.
+  </p>
+
+  <p>
+  Vďaka modernej technike a skúsenostiam vieme zabezpečiť kvalitný vrt s dostatočným prítokom vody.
+  Najčastejšie realizujeme vrty v hĺbke 50–70 metrov.
+  </p>
+
+  <p>
+  Cena je jednoduchá a férová: <strong>60€ za meter</strong>.
+  </p>
 </section>
 
-<!-- OBLAST -->
+<!-- SLUŽBY -->
 <section>
-  <div class="container">
-    <h2>📍 Oblasť pôsobenia</h2>
+  <h2>Služby</h2>
 
-    <div class="list">
-      <div>Detva</div>
-      <div>Zvolen</div>
-      <div>Banská Bystrica</div>
-      <div>Brezno</div>
-      <div>Krupina</div>
-      <div>Hriňová</div>
-    </div>
+  <div class="box">
+    <h3>Vŕtanie studní</h3>
+    <p>Kompletné vrtanie studní Detva na kľúč.</p>
   </div>
-</section>
 
-<!-- CISTENIE -->
-<section id="cistenie">
-  <div class="container">
-    <h2>💦 Čistenie studní</h2>
-
-    <p>
-      Čistenie studní metódou airlift odstráni piesok, kaly a nečistoty.
-      Zlepší prietok aj kvalitu vody.
-    </p>
+  <div class="box">
+    <h3>Čistenie studní</h3>
+    <p>Odstránenie kalov a obnovenie prietoku vody.</p>
   </div>
-</section>
 
-<!-- ZAPAJANIE -->
-<section id="zapajanie">
-  <div class="container">
-    <h2>⚙️ Zapájanie studní</h2>
-
-    <p>
-      Montáž čerpadla, spätné klapky, ochrana proti chodu nasucho,
-      napojenie do domu a finálne prepláchnutie systému.
-    </p>
-
-    <div class="images">
-      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/sachta-montaz11-300x226.png">
-      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/tn_zoom_obrazek_39-300x225.jpg">
-    </div>
+  <div class="box">
+    <h3>Zapojenie čerpadiel</h3>
+    <p>Kompletné zapojenie systému do domu.</p>
   </div>
 </section>
 
 <!-- KONTAKT -->
-<section id="kontakt">
-  <div class="container">
-    <h2>📞 Kontakt</h2>
+<section>
+  <h2>Kontakt</h2>
 
-    <p><b>📞 0909 163 189</b></p>
-    <p><b>✉️ studnedetva@gmail.com</b></p>
+  <p>📞 <a href="tel:+421909163189">0909 163 189</a></p>
+  <p>✉️ studnedetva@gmail.com</p>
 
-    <form action="mailto:studnedetva@gmail.com" method="post" enctype="text/plain">
-      <input type="text" placeholder="Meno" required>
-      <input type="tel" placeholder="Telefón" required>
-      <textarea placeholder="Správa"></textarea>
-      <button>Odoslať dopyt</button>
-    </form>
-  </div>
+  <!-- FORM -->
+  <form action="mailto:studnedetva@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="meno" placeholder="Vaše meno" required>
+    <input type="tel" name="telefon" placeholder="Telefón" required>
+    <textarea name="sprava" placeholder="Napíšte čo potrebujete"></textarea>
+    <button type="submit">Odoslať dopyt</button>
+  </form>
+
+  <!-- MAPA -->
+  <iframe 
+  src="https://www.google.com/maps?q=Detva&output=embed"
+  width="100%" height="300" style="border:0;margin-top:20px;"></iframe>
+
 </section>
-
-<!-- STICKY CALL -->
-<a href="tel:+421909163189" class="call">📞 Zavolať</a>
 
 </body>
 </html>
