@@ -12,6 +12,10 @@
   --muted:rgba(238,246,255,.82);
   --accent:#1ea7ff;
   --accent2:#0c7ed6;
+  --green:#22c55e;
+  --teal:#14b8a6;
+  --amber:#f59e0b;
+  --violet:#8b5cf6;
   --border:rgba(255,255,255,.16);
   --shadow:0 18px 50px rgba(0,0,0,.28);
   --radius:24px;
@@ -31,6 +35,10 @@
   box-shadow:0 10px 28px rgba(30,167,255,.18);
 }
 
+.hero-price::before{
+  content:"💧 ";
+}
+
 .price-box{
   margin:28px 0 24px;
   padding:22px 24px;
@@ -42,6 +50,10 @@
   font-weight:900;
   color:#fff;
   box-shadow:var(--shadow);
+}
+
+.price-box::before{
+  content:"💧 ";
 }
 
 #vizitka-hero, #vizitka-hero * , .section, .section *{
@@ -145,6 +157,26 @@ a{
   color:#fff;
 }
 
+#vizitka-hero .hero-badge:nth-child(1){
+  background:rgba(34,197,94,.12);
+  border-color:rgba(34,197,94,.28);
+}
+
+#vizitka-hero .hero-badge:nth-child(2){
+  background:rgba(20,184,166,.12);
+  border-color:rgba(20,184,166,.28);
+}
+
+#vizitka-hero .hero-badge:nth-child(3){
+  background:rgba(30,167,255,.12);
+  border-color:rgba(30,167,255,.28);
+}
+
+#vizitka-hero .hero-badge:nth-child(4){
+  background:rgba(245,158,11,.12);
+  border-color:rgba(245,158,11,.28);
+}
+
 .vizitka-menu{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -164,6 +196,22 @@ a{
   font-weight:700;
   transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
   backdrop-filter:blur(8px);
+}
+
+.vizitka-menu a[href="#vrtanie"]::before{
+  content:"🛠️ ";
+}
+
+.vizitka-menu a[href="#cistenie"]::before{
+  content:"💦 ";
+}
+
+.vizitka-menu a[href="#zapajanie"]::before{
+  content:"⚙️ ";
+}
+
+.vizitka-menu a[href="#kontakt"]::before{
+  content:"📞 ";
 }
 
 .vizitka-menu a:hover{
@@ -210,6 +258,17 @@ a{
   color:#fff;
   scroll-margin-top:84px;
   border-top:1px solid rgba(255,255,255,.05);
+  position:relative;
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(30,167,255,.35), transparent);
 }
 
 .section:nth-of-type(even){
@@ -226,6 +285,30 @@ a{
   line-height:1.1;
   margin:0 0 16px;
   letter-spacing:-.03em;
+}
+
+#why-title::before{
+  content:"💧 ";
+}
+
+#vrtanie h2::before{
+  content:"🛠️ ";
+}
+
+#cistenie h2::before{
+  content:"💦 ";
+}
+
+#zapajanie h2::before{
+  content:"⚙️ ";
+}
+
+#kontakt h2::before{
+  content:"📞 ";
+}
+
+#faq h2::before{
+  content:"❓ ";
 }
 
 .section h3{
@@ -258,16 +341,42 @@ a{
 }
 
 .feature-card{
-  background:var(--card);
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.06));
   border:1px solid var(--border);
   border-radius:var(--radius);
   padding:22px;
   box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+
+.feature-card::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:4px;
+  background:linear-gradient(90deg, var(--accent), var(--teal), var(--green));
+  opacity:.9;
 }
 
 .feature-card h3{
   margin-top:0;
   margin-bottom:10px;
+}
+
+.feature-card:nth-child(1) h3::before{
+  content:"✅ ";
+  color:var(--green);
+}
+
+.feature-card:nth-child(2) h3::before{
+  content:"🚛 ";
+  color:var(--amber);
+}
+
+.feature-card:nth-child(3) h3::before{
+  content:"📍 ";
+  color:#7fd0ff;
 }
 
 .feature-card p{
@@ -344,6 +453,10 @@ a{
   box-shadow:0 10px 26px rgba(30,167,255,.3);
 }
 
+.cta-strip .cta-link::before{
+  content:"📞 ";
+}
+
 .mapa-wrapper{
   margin-top:26px;
   border-radius:24px;
@@ -370,9 +483,21 @@ ul.clean-list{
 ul.clean-list li{
   padding:14px 16px;
   border-radius:16px;
-  background:var(--card);
+  background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.06));
   border:1px solid var(--border);
   color:var(--text);
+  position:relative;
+  padding-left:42px;
+}
+
+ul.clean-list li::before{
+  content:"✓";
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--green);
+  font-weight:900;
 }
 
 .faq{
@@ -384,13 +509,30 @@ ul.clean-list li{
 .faq-item{
   padding:20px 22px;
   border-radius:20px;
-  background:var(--card);
+  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.06));
   border:1px solid var(--border);
   box-shadow:var(--shadow);
+  position:relative;
+}
+
+.faq-item::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:3px;
+  border-radius:20px 20px 0 0;
+  background:linear-gradient(90deg, var(--accent), var(--green), var(--amber));
 }
 
 .faq-item h3{
   margin:0 0 8px;
+}
+
+.faq-item h3::before{
+  content:"❔ ";
+  color:var(--accent);
 }
 
 .footer-note{
@@ -453,7 +595,13 @@ ul.clean-list li{
 
   <div class="hero-price">💧 60€ / meter</div>
 
-  
+  <div class="hero-badges" aria-label="Hlavné výhody">
+    <span class="hero-badge">Vŕtanie studní</span>
+    <span class="hero-badge">Čistenie studní</span>
+    <span class="hero-badge">Zapájanie čerpadiel</span>
+    <span class="hero-badge">Rýchla realizácia</span>
+  </div>
+
   <div class="vizitka-menu">
     <a href="#vrtanie">Vŕtanie</a>
     <a href="#cistenie">Čistenie</a>
