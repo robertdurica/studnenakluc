@@ -1,6 +1,11 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vŕtanie studní Detva</title>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
 
 <style>
 :root{
@@ -13,229 +18,278 @@
   --accent2:#0c7ed6;
   --green:#22c55e;
   --border:rgba(255,255,255,.16);
-  --shadow:0 18px 50px rgba(0,0,0,.28);
-  --radius:24px;
-}
-
-.hero-price{
-  display:inline-block;
-  margin:12px 0 18px;
-  padding:12px 20px;
-  border-radius:999px;
-  background:linear-gradient(135deg, rgba(30,167,255,.18), rgba(12,126,214,.24));
-  border:1px solid rgba(30,167,255,.28);
-  font-size:26px;
-  font-weight:900;
-}
-
-.price-box{
-  margin:28px 0;
-  padding:22px;
-  border-radius:20px;
-  background:linear-gradient(135deg, rgba(30,167,255,.14), rgba(12,126,214,.18));
-  border:1px solid rgba(30,167,255,.24);
-  text-align:center;
-  font-size:24px;
-  font-weight:900;
 }
 
 body{
   margin:0;
+  font-family:Arial;
   background:var(--bg);
   color:var(--text);
-  font-family:system-ui,Arial;
 }
 
-#vizitka-hero{
-  min-height:100vh;
-  background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),
-  url("/A_digital_illustration_showcases_an_underwater_dig.png.png") center/cover;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+section{
+  padding:80px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+h1{font-size:48px;}
+h2{font-size:34px;}
+
+p{
+  font-size:18px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+/* HERO */
+.hero{
   text-align:center;
   padding:120px 20px;
+  background:
+  linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.8)),
+  url("https://www.studnenakluc.sk/wp-content/uploads/2026/02/A_digital_illustration_showcases_an_underwater_dig.png.png") center/cover;
 }
 
-#vizitka-hero img{
-  width:160px;
+.hero img{
+  width:200px;
   margin-bottom:20px;
 }
 
-h1{
-  font-size:48px;
-  margin:0;
+.price{
+  display:inline-block;
+  margin:15px 0;
+  padding:14px 24px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  font-size:26px;
+  font-weight:bold;
 }
 
-.hero-subtitle{
-  font-size:20px;
-  margin-bottom:10px;
-}
-
-.vizitka-menu{
+.menu{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
   max-width:500px;
-  width:100%;
-  margin:20px 0;
+  margin:20px auto;
 }
 
-.vizitka-menu a{
-  padding:16px;
-  border-radius:14px;
+.menu a{
   background:rgba(255,255,255,.1);
+  padding:16px;
+  border-radius:12px;
   text-decoration:none;
-  font-weight:700;
+  color:white;
+  font-weight:bold;
 }
 
-.vizitka-phone{
-  padding:16px 30px;
-  border-radius:50px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;
-  font-weight:800;
-  text-decoration:none;
-}
-
-.section{
-  padding:80px 20px;
-}
-
-.section-inner{
-  max-width:1000px;
-  margin:auto;
-}
-
-.feature-grid{
+/* GRID */
+.grid{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap:16px;
+  gap:20px;
 }
 
-.feature-card{
+.card{
   background:var(--card);
   padding:20px;
-  border-radius:20px;
+  border-radius:16px;
 }
 
-.media-grid{
+/* IMAGES */
+.images{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
+  margin-top:20px;
 }
 
-.media-grid img{
+.images img{
   width:100%;
   border-radius:14px;
 }
 
-.clean-list{
-  list-style:none;
-  padding:0;
+/* LIST */
+.list{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-.clean-list li{
+.list div{
   background:var(--card);
   padding:14px;
   border-radius:12px;
 }
 
-.faq-item{
-  background:var(--card);
-  padding:18px;
-  border-radius:16px;
-  margin-bottom:10px;
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-width:500px;
 }
 
-/* 🔥 MOBIL – FIXNUTÉ */
-@media (max-width:768px){
+input, textarea{
+  padding:14px;
+  border-radius:10px;
+  border:none;
+}
 
-  #vizitka-hero img{
-    width:180px;
-  }
+button{
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;
+  font-weight:bold;
+}
 
-  h1{
-    font-size:34px;
-  }
+/* STICKY CALL */
+.call{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--green);
+  color:white;
+  padding:16px 20px;
+  border-radius:50px;
+  font-weight:bold;
+  text-decoration:none;
+}
 
-  .hero-subtitle{
-    font-size:18px;
-  }
-
-  .hero-price{
-    font-size:24px;
-  }
-
-  .section h2{
-    font-size:26px;
-  }
-
-  .section p{
-    font-size:17px;
-  }
-
-  .feature-grid{
-    grid-template-columns:1fr;
-  }
-
-  .media-grid{
-    grid-template-columns:1fr;
-  }
-
-  .clean-list{
-    grid-template-columns:1fr;
-  }
-
+/* MOBILE */
+@media(max-width:768px){
+  h1{font-size:34px;}
+  .grid{grid-template-columns:1fr;}
+  .images{grid-template-columns:1fr;}
+  .list{grid-template-columns:1fr;}
 }
 </style>
+</head>
 
-<section id="vizitka-hero">
-  <img src="ChatGPT-Image-27.-1.-2026-09_15_41.png">
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/ChatGPT-Image-27.-1.-2026-09_15_41.png">
   <h1>Vŕtanie studní na kľúč</h1>
-  <p class="hero-subtitle">Banskobystrický kraj</p>
+  <p>Banskobystrický kraj</p>
 
-  <div class="hero-price">💧 60€ / meter</div>
+  <div class="price">💧 60€ / meter</div>
 
-  <div class="vizitka-menu">
+  <div class="menu">
     <a href="#vrtanie">🛠️ Vŕtanie</a>
     <a href="#cistenie">💦 Čistenie</a>
     <a href="#zapajanie">⚙️ Zapájanie</a>
     <a href="#kontakt">📞 Kontakt</a>
   </div>
-
-  <a class="vizitka-phone" href="tel:+421909163189">📞 0909 163 189</a>
 </section>
 
-<section id="vrtanie" class="section">
-  <div class="section-inner">
-    <h2>🛠️ Vŕtanie studní</h2>
+<!-- VRTANIE -->
+<section id="vrtanie">
+  <div class="container">
+    <h2>🛠️ Vŕtanie studní na kľúč</h2>
 
-    <div class="price-box">💧 60€ / meter</div>
+    <div class="price">60€ / meter</div>
 
-    <div class="media-grid">
-      <img src="Snimka-obrazovky-2026-02-09-203104-300x207.png">
-      <img src="XAS238_kompresor_web.jpg">
+    <p>
+      Realizujeme profesionálne vrtanie studní modernou technikou.
+      Používame výkonnú vrtnú súpravu a kompresor, zvládame aj náročné podmienky.
+    </p>
+
+    <div class="images">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/Snimka-obrazovky-2026-02-09-203104-300x207.png">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/XAS238_kompresor_web.jpg">
     </div>
 
-    <p>Profesionálne vŕtanie studní s modernou technikou.</p>
+    <p>
+      Hĺbky vrtov najčastejšie 50–70m, maximálne až 100m.
+      Pracovisko po dokončení vždy upraceme.
+    </p>
   </div>
 </section>
 
-<section id="kontakt" class="section">
-  <div class="section-inner">
+<!-- SLUZBY -->
+<section>
+  <div class="container">
+    <h2>💧 Služby</h2>
+
+    <div class="grid">
+      <div class="card">✅ Kompletné riešenie</div>
+      <div class="card">🚛 Rýchla realizácia</div>
+      <div class="card">📍 Banskobystrický kraj</div>
+    </div>
+  </div>
+</section>
+
+<!-- OBLAST -->
+<section>
+  <div class="container">
+    <h2>📍 Oblasť pôsobenia</h2>
+
+    <div class="list">
+      <div>Detva</div>
+      <div>Zvolen</div>
+      <div>Banská Bystrica</div>
+      <div>Brezno</div>
+      <div>Krupina</div>
+      <div>Hriňová</div>
+    </div>
+  </div>
+</section>
+
+<!-- CISTENIE -->
+<section id="cistenie">
+  <div class="container">
+    <h2>💦 Čistenie studní</h2>
+
+    <p>
+      Čistenie studní metódou airlift odstráni piesok, kaly a nečistoty.
+      Zlepší prietok aj kvalitu vody.
+    </p>
+  </div>
+</section>
+
+<!-- ZAPAJANIE -->
+<section id="zapajanie">
+  <div class="container">
+    <h2>⚙️ Zapájanie studní</h2>
+
+    <p>
+      Montáž čerpadla, spätné klapky, ochrana proti chodu nasucho,
+      napojenie do domu a finálne prepláchnutie systému.
+    </p>
+
+    <div class="images">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/sachta-montaz11-300x226.png">
+      <img src="https://www.studnenakluc.sk/wp-content/uploads/2026/02/tn_zoom_obrazek_39-300x225.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="container">
     <h2>📞 Kontakt</h2>
 
-    <a href="tel:+421909163189">📞 +421 909 163 189</a><br>
-    <a href="mailto:studnedetva@gmail.com">✉️ studnedetva@gmail.com</a>
+    <p><b>📞 0909 163 189</b></p>
+    <p><b>✉️ studnedetva@gmail.com</b></p>
 
-    <div class="media-grid">
-      <img src="vizitka-cool-1-300x168.png">
-      <img src="ChatGPT-Image-27.-1.-2026-09_15_41.png">
-    </div>
+    <form action="mailto:studnedetva@gmail.com" method="post" enctype="text/plain">
+      <input type="text" placeholder="Meno" required>
+      <input type="tel" placeholder="Telefón" required>
+      <textarea placeholder="Správa"></textarea>
+      <button>Odoslať dopyt</button>
+    </form>
   </div>
 </section>
+
+<!-- STICKY CALL -->
+<a href="tel:+421909163189" class="call">📞 Zavolať</a>
+
+</body>
+</html>
