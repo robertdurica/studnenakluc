@@ -1,4 +1,4 @@
-<div id="fix-mobile">
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
@@ -588,138 +588,55 @@ ul.clean-list li::before{
   }
 }
 
-/* AGRESÍVNE ZVÄČŠENIE */
-#vizitka-hero img{
-  width:220px !important;
-  max-width:220px !important;
+/* ===== FORCE OVERRIDE ===== */
+
+html body #vizitka-hero h1{
+  font-size:56px !important;
 }
 
-#vizitka-hero h1{
-  font-size:clamp(44px,6vw,72px) !important;
-}
-
-#vizitka-hero .hero-subtitle{
-  font-size:22px !important;
-}
-
-.hero-price{
-  font-size:clamp(26px,3vw,40px) !important;
-  padding:16px 26px !important;
-}
-
-.price-box{
-  font-size:30px !important;
-  padding:26px !important;
-}
-
-.vizitka-menu a{
-  font-size:19px !important;
-  padding:22px 18px !important;
-}
-
-.vizitka-phone{
-  font-size:24px !important;
-  padding:22px 46px 22px 80px !important;
-}
-
-.section h2{
-  font-size:clamp(34px,4vw,52px) !important;
-}
-
-.section h3{
+html body #vizitka-hero .hero-subtitle{
   font-size:26px !important;
 }
 
-.section p{
-  font-size:19px !important;
-  line-height:1.9 !important;
-}
-
-ul.clean-list li{
-  font-size:18px !important;
-}
-
-@media (max-width: 767px){
-  #vizitka-hero img{
-    width:190px !important;
-    max-width:190px !important;
-  }
-
-  #vizitka-hero h1{
-    font-size:44px !important;
-  }
-
-  .hero-subtitle{
-    font-size:22px !important;
-  }
-
-  .hero-price{
-    font-size:28px !important;
-  }
-
-  .vizitka-phone{
-    font-size:22px !important;
-  }
-
-  .section h2{
-    font-size:34px !important;
-  }
-
-  .section p{
-    font-size:19px !important;
-  }
-}
-
-#fix-mobile #vizitka-hero img{
-  width:260px !important;
-}
-
-#fix-mobile #vizitka-hero h1{
-  font-size:52px !important;
-}
-
-#fix-mobile #vizitka-hero .hero-subtitle{
-  font-size:26px !important;
-}
-
-#fix-mobile .hero-price{
+html body .hero-price{
   font-size:34px !important;
 }
 
-#fix-mobile .vizitka-menu a{
+html body .vizitka-menu a{
   font-size:22px !important;
 }
 
-#fix-mobile .vizitka-phone{
+html body .vizitka-phone{
   font-size:26px !important;
 }
 
-#fix-mobile .section h2{
-  font-size:40px !important;
+html body .section h2{
+  font-size:42px !important;
 }
 
-#fix-mobile .section p{
+html body .section p{
   font-size:21px !important;
 }
 
-@media (max-width:767px){
-  #fix-mobile #vizitka-hero img{
-    width:220px !important;
-  }
+html body #vizitka-hero img{
+  width:240px !important;
+}
 
-  #fix-mobile #vizitka-hero h1{
+/* MOBILE */
+@media (max-width:767px){
+
+  html body #vizitka-hero h1{
     font-size:48px !important;
   }
 
-  #fix-mobile .section p{
+  html body #vizitka-hero img{
+    width:200px !important;
+  }
+
+  html body .section p{
     font-size:20px !important;
   }
-}
 
-
-
-body{
-  background:red !important;
 }
 
   
