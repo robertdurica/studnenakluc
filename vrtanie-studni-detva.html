@@ -59,7 +59,6 @@
     a { color: inherit; }
     img { display: block; max-width: 100%; }
     .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-
     .topbar {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(18px);
@@ -81,14 +80,12 @@
     .brand-mark img { width:100%; height:100%; object-fit: contain; padding:4px; }
     .brand-text strong { display:block; font-size:.98rem; line-height:1.1; letter-spacing:.02em; }
     .brand-text span { display:block; font-size:.86rem; color:var(--muted); margin-top:3px; }
-
     .nav {
       display:flex; align-items:center; gap:18px; font-size:.95rem; color:var(--muted);
       flex-wrap: wrap; justify-content: flex-end;
     }
     .nav a { text-decoration:none; }
     .nav a:hover { color:white; }
-
     .cta-small {
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:12px 16px; border-radius:999px; text-decoration:none; color:white;
@@ -96,7 +93,6 @@
       box-shadow: 0 14px 30px rgba(15,130,255,.28);
       font-weight:800; white-space:nowrap;
     }
-
     .hero { position:relative; padding:46px 0 26px; }
     .hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:24px; align-items:stretch; }
     .hero-copy, .hero-visual, .panel, .card, .quote {
@@ -139,14 +135,12 @@
     .btn-ghost {
       color:#e7f3ff; background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
     }
-
     .hero-mini { margin-top:26px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
     .mini {
       padding:14px; border-radius:18px; background: rgba(4,13,24,.35); border:1px solid rgba(255,255,255,.08);
     }
     .mini strong { display:block; font-size:1.05rem; }
     .mini span { display:block; margin-top:6px; color:var(--muted); font-size:.88rem; line-height:1.45; }
-
     .hero-visual {
       position:relative; overflow:hidden; min-height:100%; padding:14px; display:flex; flex-direction:column; gap:14px;
     }
@@ -168,7 +162,6 @@
     }
     .visual-badge strong { display:block; font-size:1rem; }
     .visual-badge span { display:block; margin-top:6px; color:var(--muted); font-size:.9rem; }
-
     .contact-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
     .contact-pill {
       display:flex; align-items:center; gap:10px; padding:14px 16px; border-radius:18px;
@@ -182,7 +175,6 @@
       background: rgba(55,167,255,.16); border:1px solid rgba(55,167,255,.24); flex:0 0 auto;
     }
     .contact-pill small { display:block; color:var(--muted); font-weight:600; margin-top:2px; }
-
     .section {
       padding:18px 0 0; width:100%; display:block; clear:both;
     }
@@ -191,14 +183,12 @@
     }
     .section-head h2 { margin:0; font-size: clamp(1.5rem, 2vw, 2.3rem); letter-spacing:-.03em; }
     .section-head p { margin:0; color:var(--muted); max-width:62ch; line-height:1.65; }
-
     .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; width:100%; }
     .stat {
       padding:18px; border-radius:20px; background: rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08);
     }
     .stat strong { display:block; font-size:1.5rem; margin-bottom:6px; }
     .stat span { color:var(--muted); line-height:1.55; font-size:.94rem; }
-
     .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
     .card { overflow:hidden; background: linear-gradient(180deg, rgba(11,25,43,.96), rgba(8,19,34,.92)); }
     .card .img { aspect-ratio:16/11; overflow:hidden; background:#0b1b2f; }
@@ -207,7 +197,6 @@
     .card .body { padding:18px; }
     .card h3 { margin:0 0 8px; font-size:1.08rem; }
     .card p { margin:0; color:var(--muted); line-height:1.65; }
-
     .split { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:stretch; }
     .panel { padding:24px; background: rgba(10,23,40,.82); }
     .panel h3 { margin:0 0 10px; font-size:1.2rem; }
@@ -221,7 +210,6 @@
       width:24px; height:24px; border-radius:50%; background: rgba(77,225,161,.14); border:1px solid rgba(77,225,161,.24);
       display:grid; place-items:center; flex:0 0 auto; color:var(--ok); font-size:.9rem; margin-top:1px;
     }
-
     .price-box {
       display:flex; flex-direction:column; justify-content:space-between; min-height:100%;
       background: linear-gradient(180deg, rgba(15,130,255,.12), rgba(10,23,40,.88)); position:relative; overflow:hidden;
@@ -242,7 +230,6 @@
       display:flex; gap:10px; align-items:flex-start; color:#e9f2fb; line-height:1.55;
     }
     .price-list li::before { content:"✓"; color:var(--gold); font-weight:900; }
-
     .gallery { display:grid; grid-template-columns:1.3fr .7fr; gap:18px; }
     .gallery-main, .gallery-side {
       border-radius: var(--radius); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background: rgba(10,22,40,.78);
@@ -259,20 +246,17 @@
       position:absolute; left:14px; bottom:14px; padding:8px 11px; border-radius:999px; background: rgba(5,15,28,.72); border:1px solid rgba(255,255,255,.1);
       font-size:.85rem; font-weight:800;
     }
-
     .quote {
       padding:24px; background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
     }
     .quote p { margin:0; color:#eaf4ff; line-height:1.8; font-size:1.02rem; }
     .quote strong { display:block; margin-top:14px; color:var(--gold); }
-
     .seo-copy {
       margin-top:26px; padding:24px; border-radius:var(--radius); background: rgba(10,23,40,.78);
       border:1px solid var(--line); box-shadow:var(--shadow); color:var(--muted); line-height:1.8;
     }
     .seo-copy h2 { margin:0 0 10px; color:var(--text); font-size: clamp(1.35rem, 1.9vw, 2rem); letter-spacing:-.03em; }
     .seo-copy p { margin:0 0 12px; }
-
     .faq { display:grid; gap:12px; }
     details {
       border:1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.04); border-radius:18px; padding:0 16px; overflow:hidden;
@@ -280,7 +264,6 @@
     summary { cursor:pointer; list-style:none; padding:16px 0; font-weight:800; }
     summary::-webkit-details-marker { display:none; }
     details p { margin:0 0 16px; color:var(--muted); line-height:1.7; }
-
     .contact-box {
       display:grid; grid-template-columns:1.05fr .95fr; gap:18px; align-items:stretch;
     }
@@ -301,13 +284,11 @@
     }
     .mapbox img { max-width:360px; width:100%; height:auto; object-fit:contain; }
     .mapbox p { margin:16px 0 0; color:var(--muted); line-height:1.6; }
-
     footer { padding:42px 0 96px; color:var(--muted); }
     .foot {
       border-top:1px solid var(--line); padding-top:24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center;
     }
     .foot strong { color:var(--text); }
-
     .mobile-cta {
       position:fixed; left:50%; bottom:14px; transform:translateX(-50%); z-index:60; display:none;
       width:calc(100% - 28px); max-width:560px; gap:10px;
@@ -315,7 +296,6 @@
     .mobile-cta a {
       flex:1 1 auto; justify-content:center; text-align:center; box-shadow:0 14px 32px rgba(0,0,0,.3);
     }
-
     .floaty { animation: floaty 6s ease-in-out infinite; }
     @keyframes floaty { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
     .glow { position:relative; }
@@ -323,7 +303,6 @@
       content:""; position:absolute; inset:-1px; border-radius:inherit;
       box-shadow:0 0 0 1px rgba(55,167,255,.12), 0 0 32px rgba(55,167,255,.12); pointer-events:none;
     }
-
     .region-links {
       display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;
     }
@@ -331,11 +310,9 @@
       display:inline-flex; padding:10px 14px; border-radius:999px; background: rgba(255,255,255,.05);
       border:1px solid rgba(255,255,255,.08); text-decoration:none; color:#edf4ff; font-weight:700;
     }
-
     #mapa-posobnosti {
       width:100%; height:460px; background:#0b1520;
     }
-
     @media (max-width: 1040px) {
       .hero-grid, .split, .gallery, .contact-box { grid-template-columns:1fr; }
       .cards { grid-template-columns:1fr 1fr; }
@@ -344,7 +321,6 @@
       .hero-mini { grid-template-columns:1fr; }
       .nav { display:none; }
     }
-
     @media (max-width: 720px) {
       .hero { padding-top:24px; }
       .hero-copy, .panel, .contact-card, .seo-copy { padding:22px; }
@@ -610,7 +586,7 @@
     </div>
     <div class="seo-copy" style="margin-top:18px;">
       <h2>Najčastejšie lokality v okolí Detva</h2>
-      <p>Medzi najčastejšie lokality v okolí Detva patria Hriňová, Kriváň, Korytárky, Očová, Zvolen, Slatinské Lazy.</p>
+      <p>Medzi najčastejšie lokality v okolí Detva patria Hriňová, Kriváň, Korytárky, Očová, Zvolen, Stožok.</p>
       <div class="region-links">
         <a href="vrtanie-studni-banska-bystrica.html">Banská Bystrica</a><a href="vrtanie-studni-zvolen.html">Zvolen</a><a href="vrtanie-studni-brezno.html">Brezno</a><a href="vrtanie-studni-krupina.html">Krupina</a><a href="vrtanie-studni-ziar-nad-hronom.html">Žiar nad Hronom</a><a href="vrtanie-studni-zarnovica.html">Žarnovica</a><a href="vrtanie-studni-velky-krtis.html">Veľký Krtíš</a><a href="vrtanie-studni-lucenec.html">Lučenec</a><a href="vrtanie-studni-rimavska-sobota.html">Rimavská Sobota</a>
       </div>
@@ -664,7 +640,7 @@
           </div>
           <div class="contact-line">
             <span class="icon">⌂</span>
-            <div><strong>Oblasť</strong>Detva • Banskobystrický kraj • Hriňová, Kriváň, Korytárky, Očová, Zvolen, Slatinské Lazy</div>
+            <div><strong>Oblasť</strong>Detva • Banskobystrický kraj • Detva, Hriňová, Kriváň, Korytárky, Očová, Zvolen, Stožok, Slatinské Lazy, Klokoč</div>
           </div>
         </div>
       </div>
@@ -688,7 +664,6 @@
     <a class="btn btn-primary" href="mailto:studnedetva@gmail.com">Email</a>
   </div>
 
-  <h2 style="opacity:0; position:absolute; left:-9999px;">Vŕtanie studní v regióne</h2>
   <div style="opacity:0; position:absolute; left:-9999px;">
     <a href="vrtanie-studni-banska-bystrica.html">Banská Bystrica</a> <a href="vrtanie-studni-zvolen.html">Zvolen</a> <a href="vrtanie-studni-detva.html">Detva</a> <a href="vrtanie-studni-brezno.html">Brezno</a> <a href="vrtanie-studni-krupina.html">Krupina</a> <a href="vrtanie-studni-ziar-nad-hronom.html">Žiar nad Hronom</a> <a href="vrtanie-studni-zarnovica.html">Žarnovica</a> <a href="vrtanie-studni-velky-krtis.html">Veľký Krtíš</a> <a href="vrtanie-studni-lucenec.html">Lučenec</a> <a href="vrtanie-studni-rimavska-sobota.html">Rimavská Sobota</a>
   </div>
@@ -716,26 +691,63 @@
 
       var mesta = [
         ["Detva", 48.558, 19.419],
-        ["Hriňová", 48.577, 19.531],
-        ["Kriváň", 48.53, 19.371],
-        ["Korytárky", 48.541, 19.445],
-        ["Očová", 48.59, 19.3],
-        ["Zvolen", 48.576, 19.127]
+        ["Hriňová", 48.574, 19.532],
+        ["Kriváň", 48.531, 19.371],
+        ["Korytárky", 48.543, 19.447],
+        ["Očová", 48.596, 19.303],
+        ["Zvolen", 48.576, 19.127],
+        ["Stožok", 48.514, 19.362],
+        ["Slatinské Lazy", 48.531, 19.319],
+        ["Klokoč", 48.507, 19.402]
       ];
 
       var cluster = L.markerClusterGroup();
       var bounds = [];
 
       mesta.forEach(function (m) {
-        var marker = L.marker([m[1], m[2]], { icon: studnaIcon })
-          .bindPopup("<strong>" + m[0] + "</strong>");
-        cluster.addLayer(marker);
+        cluster.addLayer(
+          L.marker([m[1], m[2]], { icon: studnaIcon })
+            .bindPopup("<strong>" + m[0] + "</strong>")
+        );
         bounds.push([m[1], m[2]]);
       });
 
       mapa.addLayer(cluster);
       mapa.fitBounds(bounds, { padding: [40, 40] });
     });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Koľko stojí vŕtanie studne v Detva?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "60 € za meter. Cena nezávisí od hĺbky, typu podložia a konkrétneho pozemku."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Robíte aj okolie Detva?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, pôsobíme v Detva aj v okolí, napríklad v Hriňová, Kriváň, Korytárky a ďalších obciach v okolí."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Viete zabezpečiť aj čerpadlo a zapojenie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Áno, môžeme dodať kompletné riešenie vrátane techniky, čerpadiel a potrebných rozvodov."
+        }
+      }
+    ]
+  }
   </script>
 </body>
 </html>
