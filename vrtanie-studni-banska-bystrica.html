@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="sk">
-<head>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  var mapa = L.map('mapa-posobnosti', {
+    scrollWheelZoom: false
+  }).setView([48.736, 19.146], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(mapa);
+
+  var studnaIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+    iconSize: [32, 32],
+    iconAnchor: [16, 32]
+  });
+
+  var mesta = [
+    ["Banská Bystrica", 48.736, 19.146],
+    ["Zvolen", 48.576, 19.127],
+    ["Detva", 48.558, 19.419],
+    ["Brezno", 48.806, 19.637],
+    ["Krupina", 48.355, 19.064],
+    ["Žiar nad Hronom", 48.588, 18.860]
+  ];
+
+  var cluster = L.markerClusterGroup();
+
+  mesta.forEach(function(m){
+    cluster.addLayer(
+      L.marker([m[1], m[2]], {icon: studnaIcon})
+        .bindPopup("<strong>" + m[0] + "</strong>")
+    );
+  });
+
+  mapa.addLayer(cluster);
+});
+</script>
+  
+  
+  <head>
 
 <title>Vŕtanie studní Banská Bystrica | Studne na kľúč</title>
 <meta name="description" content="Vŕtanie studní Banská Bystrica a okolie od 60€/m. Studne na kľúč, čistenie, zapojenie čerpadiel. Rýchla realizácia a profesionálny prístup.">
