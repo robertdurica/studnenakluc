@@ -3,120 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vŕtanie studní Banskobystrický kraj | Studne na kľúč od 60€/m</title>
-<meta name="description" content="Vŕtanie studní v Banskej Bystrici, Zvolene, Detve, Brezne, Lučenci a okolí. Studne na kľúč, čistenie, zapájanie čerpadiel. Konečná cena 60€/m.">
+<title>Vŕtanie studní Banskobystrický kraj | 60€ / meter</title>
+<meta name="description" content="Vŕtanie studní na kľúč, čistenie studní a zapájanie čerpadiel. Cena od 60€ za meter. Obhliadka do 7 dní.">
+<meta name="theme-color" content="#06111f">
 <link rel="icon" href="assets/logo.png">
 <style>
 :root{
-  --bg:#06111f;
-  --panel:#0b1d33;
-  --panel2:#0e2541;
-  --text:#f4fbff;
-  --muted:#c8dcef;
-  --accent:#37a7ff;
-  --accent2:#15d4c8;
-  --accent3:#ff9b38;
-  --line:rgba(255,255,255,.10);
-  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --bg:#06111f; --text:#f4fbff; --muted:#c8dcef; --accent:#37a7ff; --accent2:#15d4c8; --line:rgba(255,255,255,.10); --shadow:0 18px 60px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
-  radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
-  radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
-  linear-gradient(180deg, #06111f 0%, #071427 45%, #06111f 100%);
-  color:var(--text);line-height:1.7}
+body{
+  margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.72;
+  background:
+    radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
+    linear-gradient(180deg,#06111f 0%, #071427 45%, #06111f 100%);
+}
 a{color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.hero{
-  padding:28px 0 34px;
-  position:relative;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;
-  min-height:88vh;
-}
-.hero-copy,.hero-side,.section-card,.district-card,.faq-item,.service-card,.step,.photo-card{
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.hero{padding:26px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:24px;align-items:stretch;min-height:88vh}
+.hero-copy,.hero-side,.section-card,.faq-item,.service-card,.step,.photo-card,.district,.mini-card{
   border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  backdrop-filter: blur(6px);
-  box-shadow:var(--shadow);
+  backdrop-filter:blur(6px);box-shadow:var(--shadow)
 }
 .hero-copy{border-radius:28px;padding:28px;display:flex;flex-direction:column;justify-content:center}
 .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.brand img{width:92px;height:auto;filter: drop-shadow(0 12px 22px rgba(0,0,0,.32))}
+.brand img{width:96px;height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.32))}
 .brand-badge{
-  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em;
-  text-transform:uppercase;font-weight:800;color:#e5f6ff;background:rgba(55,167,255,.10);
-  border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:900;
+  color:#e5f6ff;background:rgba(55,167,255,.10);border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
 }
-h1{font-size:clamp(2.4rem,5vw,4.9rem);line-height:1.02;margin:0 0 14px}
-.lead{font-size:clamp(1.02rem,1.7vw,1.28rem);color:var(--muted);max-width:65ch}
+h1{font-size:clamp(2.35rem,5vw,5rem);line-height:1.02;margin:0 0 14px}
+.lead{font-size:clamp(1.03rem,1.7vw,1.3rem);color:var(--muted);max-width:68ch}
 .price-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 14px}
-.pill{
-  display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
-  font-weight:800;border:1px solid transparent
-}
-.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border-color:rgba(55,167,255,.40);color:#fff}
-.pill.time{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#f1fbff}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:900}
+.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(55,167,255,.40)}
+.pill.time{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  min-height:54px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
-  border:1px solid transparent;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;border:1px solid transparent
 }
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(135deg, #0f82ff, #37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
+.btn.primary{background:linear-gradient(135deg,#0f82ff,#37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
 .btn.secondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35);color:#e9f8ff}
-.hero-side{
-  border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start
-}
-.stats{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:14px
-}
-.stat{
-  border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));
-  border:1px solid rgba(255,255,255,.08)
-}
-.stat strong{display:block;font-size:1.35rem;color:#fff;margin-bottom:4px}
+.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35)}
+.hero-side{border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));border:1px solid rgba(255,255,255,.08)}
+.stat strong{display:block;font-size:1.35rem;margin-bottom:4px}
 .stat span{color:var(--muted);font-size:.95rem}
-.side-note{
-  border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));
-  border:1px solid rgba(55,167,255,.20)
-}
+.side-note{border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));border:1px solid rgba(55,167,255,.20)}
 .section{padding:30px 0 8px}
 .section h2{font-size:clamp(1.5rem,3vw,2.5rem);margin:0 0 10px}
-.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:70ch}
+.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:75ch}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service-card,.step,.photo-card,.faq-item{border-radius:24px;padding:20px}
-.service-card h3,.step h3,.faq-item h3{margin:0 0 8px;font-size:1.1rem}
-.service-card p,.step p,.faq-item p{margin:0;color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service-card,.step,.photo-card,.faq-item,.mini-card{border-radius:24px;padding:20px}
+.service-card h3,.step h3,.faq-item h3,.mini-card h3{margin:0 0 8px;font-size:1.1rem}
+.service-card p,.step p,.faq-item p,.mini-card p{margin:0;color:var(--muted)}
 .icon{
   width:44px;height:44px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px;
-  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));
-  border:1px solid rgba(255,255,255,.10)
+  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(255,255,255,.10)
 }
 .kicker{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#9fd8ff;font-weight:900}
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .step{position:relative;overflow:hidden}
 .step .num{
-  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));
-  width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
+  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
 }
 .photo-card{padding:0;overflow:hidden}
 .photo-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .photo-card .cap{padding:16px 18px;color:var(--muted)}
-.map-box{
-  border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d
+.text-block{
+  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  border:1px solid var(--line);box-shadow:var(--shadow)
 }
-#map{height:480px}
-.accordion{display:grid;gap:14px}
+.text-block p{color:var(--muted);margin:0 0 14px}
+.text-block h3{margin:20px 0 10px}
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700;text-decoration:none
+}
+.map-box{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d}
+#map{height:500px}
 details.district{
   border-radius:24px;border:1px solid var(--line);
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  box-shadow:var(--shadow);overflow:hidden
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));box-shadow:var(--shadow);overflow:hidden
 }
 details.district summary{
   list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px
@@ -129,33 +106,15 @@ details.district summary::-webkit-details-marker{display:none}
 .district-body{padding:0 20px 20px}
 .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .city-link{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;
-  padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);min-height:58px
+  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;padding:14px 16px;border-radius:16px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);min-height:58px
 }
 .city-link:hover{border-color:rgba(55,167,255,.35);background:rgba(55,167,255,.09)}
-.city-link span:last-child{color:#9fd8ff}
-.text-block{
-  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  border:1px solid var(--line);box-shadow:var(--shadow)
-}
-.text-block p{color:var(--muted);margin:0 0 14px}
-.text-block h3{margin:20px 0 10px}
-.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700
-}
-.faq-item{padding:18px 20px}
-.footer{
-  padding:34px 0 56px;color:#b6ccdf;font-size:.95rem
-}
-.sticky-cta{
-  position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px
-}
+.footer{padding:38px 0 64px;color:#b6ccdf;font-size:.95rem}
+.sticky-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px}
 .sticky-cta a{flex:1}
 @media (max-width: 980px){
-  .hero-grid,.grid-3,.grid-4,.timeline{grid-template-columns:1fr}
+  .hero-grid,.grid-3,.grid-4,.timeline,.grid-2{grid-template-columns:1fr}
   .link-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
   #map{height:360px}
@@ -171,23 +130,23 @@ details.district summary::-webkit-details-marker{display:none}
   .cta-row{flex-direction:column}
 }
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
-
 <body>
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="brand-badge">⚡ KONEČNÁ CENA LEN 60€ / meter</div>
+      <div class="brand-badge">⚡ Konečná cena len 60€ / meter</div>
       <div class="brand">
         <img src="assets/logo.png" alt="Logo firmy">
       </div>
       <h1>Vŕtanie studní Banskobystrický kraj</h1>
-      <p class="lead">Kompletné riešenie od obhliadky cez vrtanie až po čistenie a zapojenie čerpadla. Konečná cena je 60€ / meter, obhliadku garantujeme do 7 dní a vŕtanie do 30 dní od obhliadky, často aj skôr.</p>
+      <p class="lead">Kompletné riešenie od obhliadky cez vrtanie až po čistenie a zapojenie čerpadla. Konečná cena 60€ / meter, obhliadka do 7 dní a realizácia do 30 dní od obhliadky, často aj skôr.</p>
       <div class="price-row">
         <span class="pill price">💧 60€ / meter</span>
-        <span class="pill time">🗓️ Obhliadka do 7 dní</span>
-        <span class="pill time">⏱️ Vŕtanie do 30 dní, často skôr</span>
+        <span class="pill time">🗓️ obhliadka do 7 dní</span>
+        <span class="pill time">⏱️ vŕtanie do 30 dní, často skôr</span>
       </div>
       <div class="cta-row">
         <a class="btn primary" href="tel:+421909163189">📞 Zavolať teraz</a>
@@ -199,14 +158,12 @@ details.district summary::-webkit-details-marker{display:none}
       <div class="stats">
         <div class="stat"><strong>60€</strong><span>konečná cena za meter</span></div>
         <div class="stat"><strong>7 dní</strong><span>obhliadka garantovaná</span></div>
-        <div class="stat"><strong>30 dní</strong><span>realizácia po obhliadke</span></div>
+        <div class="stat"><strong>30 dní</strong><span>realizácia od obhliadky</span></div>
         <div class="stat"><strong>4 služby</strong><span>vrtanie, čistenie, čerpadlá, servis</span></div>
       </div>
       <div class="side-note">
         <div class="kicker">Čo robíme</div>
-        <p style="margin:10px 0 0;color:var(--muted)">
-          Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.
-        </p>
+        <p style="margin:10px 0 0;color:var(--muted)">Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.</p>
       </div>
     </div>
   </div>
@@ -215,19 +172,17 @@ details.district summary::-webkit-details-marker{display:none}
 
 <section class="section">
   <div class="wrap">
-    <div class="section-card text-block">
+    <div class="text-block">
       <div class="kicker">Prečo je táto stránka dôležitá</div>
-      <h2>Vŕtanie studní v Banskobystrickom kraji bez zbytočného preháňania</h2>
-      <p>
-        Táto hlavná stránka je postavená tak, aby okamžite vysvetlila, čo robíte, ako pracujete a prečo sa oplatí zavolať hneď.
-        Návštevník tu nájde cenu, postup, služby, doklady aj zoznam okresných miest a lokalít, v ktorých pôsobíte.
-        Cieľ je jednoduchý: menej klikov, viac dopytov.
-      </p>
+      <h2>Hlavná stránka, ktorá má predávať a zároveň rankovať</h2>
+      <p>Táto hlavná vstupná stránka je postavená tak, aby návštevník hneď pochopil cenu, postup, služby aj oblasť pôsobenia. Namiesto krátkeho a slabého textu tu máš plnohodnotnú štruktúru: čo robíte, ako prebieha realizácia, aké doklady sa môžu vyžadovať a kde všade pôsobíte.</p>
+      <p>Na webe sa neoplatí skrývať dôležité veci. Preto je tu cena 60€ / meter viditeľná už v hero sekcii, obhliadka je komunikovaná ako do 7 dní a samotné vŕtanie do 30 dní od obhliadky, často aj skôr. To sú presne informácie, ktoré pomáhajú rozhodnúť sa rýchlo.</p>
+      <p>Web zároveň cieli na ľudí, ktorí hľadajú vŕtanie studní, studne na kľúč, čistenie studní alebo zapájanie čerpadiel. Vďaka tomu sa buduje relevantnosť pre viacero vyhľadávacích dopytov bez toho, aby stránka pôsobila umelo.</p>
       <div class="badge-row">
         <span class="badge">💧 studne na kľúč</span>
         <span class="badge">🧽 čistenie studní</span>
         <span class="badge">⚙️ zapájanie čerpadiel</span>
-        <span class="badge">📍 Banskobystrický kraj</span>
+        <span class="badge">📄 doklady a podklady</span>
       </div>
     </div>
   </div>
@@ -236,104 +191,24 @@ details.district summary::-webkit-details-marker{display:none}
 <section class="section">
   <div class="wrap">
     <h2>Čo robíme</h2>
-    <p class="section-intro">Jasne, stručne a bez zmätku. Na hlavnej stránke musí byť vidno, že robíte kompletnú službu od prvého kontaktu až po funkčnú studňu.</p>
-    <div class="grid-4">
-
-      <div class="service-card">
-        <div class="icon">💧</div>
-        <h3>Vŕtanie studní</h3>
-        <p>Presný vrt podľa podložia, hĺbky a potreby vody.</p>
-      </div>
-    
-      <div class="service-card">
-        <div class="icon">🧽</div>
-        <h3>Čistenie studní</h3>
-        <p>Odstránenie nánosov, piesku a usadenín.</p>
-      </div>
-    
-      <div class="service-card">
-        <div class="icon">⚙️</div>
-        <h3>Zapájanie čerpadiel</h3>
-        <p>Kompletné technické osadenie a testovanie.</p>
-      </div>
-    
-      <div class="service-card">
-        <div class="icon">🛠️</div>
-        <h3>Studne na kľúč</h3>
-        <p>Od obhliadky po odovzdanie bez starostí.</p>
-      </div>
-    
-    </div>
+    <p class="section-intro">Na úvod musia byť viditeľné hlavné služby. Návštevník má hneď pochopiť, že ide o kompletné riešenie vody, nie len o samotný vrt.</p>
+    <div class="grid-4"><div class="service-card"><div class="icon">💧</div><h3>Vŕtanie studní</h3><p>Presné vŕtanie podľa podložia, prístupu na pozemok a potreby vody.</p></div><div class="service-card"><div class="icon">🧽</div><h3>Čistenie studní</h3><p>Odkalenie, odstránenie piesku a obnova prietoku vody.</p></div><div class="service-card"><div class="icon">⚙️</div><h3>Zapájanie čerpadiel</h3><p>Montáž čerpadiel, tlakových nádob a celej technológie.</p></div><div class="service-card"><div class="icon">🛠️</div><h3>Studne na kľúč</h3><p>Od obhliadky až po odovzdanie funkčnej studne.</p></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <h2>Ako prebieha vrtanie</h2>
-    <p class="section-intro">Toto je sekcia, ktorá ľuďom najrýchlejšie odpovie na otázku „ako to celé funguje?“ a zároveň posilní dôveru.</p>
-    <div class="timeline">
-
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Obhliadka do 7 dní</h3>
-        <p>Prídeme na miesto, zhodnotíme podmienky, navrhneme hĺbku a technológiu.</p>
-      </div>
-    
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Príprava a dokumenty</h3>
-        <p>Pomôžeme so zoznamom podkladov podľa lokality a typu realizácie.</p>
-      </div>
-    
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Vŕtanie</h3>
-        <p>Realizujeme vrt s dôrazom na čistotu, presnosť a životnosť zdroja.</p>
-      </div>
-    
-      <div class="step">
-        <div class="num">04</div>
-        <h3>Čistenie a vystrojenie</h3>
-        <p>Studňu vyčistíme, vystrojíme a pripravíme na stabilnú prevádzku.</p>
-      </div>
-    
-      <div class="step">
-        <div class="num">05</div>
-        <h3>Zapojenie a odovzdanie</h3>
-        <p>Zapojíme čerpadlo, otestujeme systém a studňu odovzdáme pripravenú na používanie.</p>
-      </div>
-    
-    </div>
+    <p class="section-intro">Postup je jednoduchý a zrozumiteľný. Presne toto buduje dôveru aj vyššiu mieru dopytu.</p>
+    <div class="timeline"><div class="step"><div class="num">01</div><h3>Obhliadka do 7 dní</h3><p>Prídeme na miesto, pozrieme podložie a navrhneme postup.</p></div><div class="step"><div class="num">02</div><h3>Návrh riešenia</h3><p>Zhodnotíme hĺbku, prístup techniky a optimálne umiestnenie vrtu.</p></div><div class="step"><div class="num">03</div><h3>Vŕtanie</h3><p>Realizujeme vrt čisto a technicky presne.</p></div><div class="step"><div class="num">04</div><h3>Čistenie a vystrojenie</h3><p>Studňu vyčistíme, vystrojíme a pripravíme na prevádzku.</p></div><div class="step"><div class="num">05</div><h3>Zapojenie a spustenie</h3><p>Zapojíme čerpadlo a systém otestujeme.</p></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <h2>Fotky realizácií</h2>
-    <p class="section-intro">Miesto pre vizuál. Ak neskôr doplníte reálne fotky z realizácií, táto sekcia bude ešte silnejšia. Zatiaľ je pripravená ako čistý, moderný blok.</p>
-    <div class="grid-4">
-
-      <div class="photo-card">
-        <img src="assets/photo-vrtanie.png" alt="Vrtanie od prípravy po odovzdanie" loading="lazy">
-        <div class="cap">Vrtanie od prípravy po odovzdanie</div>
-      </div>
-    
-      <div class="photo-card">
-        <img src="assets/photo-cistenie.png" alt="Čistenie studne a obnova prietoku" loading="lazy">
-        <div class="cap">Čistenie studne a obnova prietoku</div>
-      </div>
-    
-      <div class="photo-card">
-        <img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla a technológie" loading="lazy">
-        <div class="cap">Zapojenie čerpadla a technológie</div>
-      </div>
-    
-      <div class="photo-card">
-        <img src="assets/photo-hotovo.png" alt="Hotová studňa pripravená na používanie" loading="lazy">
-        <div class="cap">Hotová studňa pripravená na používanie</div>
-      </div>
-    
-    </div>
+    <p class="section-intro">Fotky sú v SEO webstránke aj predajný prvok. Návštevník si cez ne vie lepšie predstaviť kvalitu práce.</p>
+    <div class="grid-4"><div class="photo-card"><img src="assets/photo-vrtanie.png" alt="Vŕtanie studní v praxi" loading="lazy"><div class="cap">Vŕtanie studní v praxi</div></div><div class="photo-card"><img src="assets/photo-cistenie.png" alt="Čistenie a odkalovanie" loading="lazy"><div class="cap">Čistenie a odkalovanie</div></div><div class="photo-card"><img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla" loading="lazy"><div class="cap">Zapojenie čerpadla</div></div><div class="photo-card"><img src="assets/photo-hotovo.png" alt="Hotová studňa na kľúč" loading="lazy"><div class="cap">Hotová studňa na kľúč</div></div></div>
   </div>
 </section>
 
@@ -342,15 +217,8 @@ details.district summary::-webkit-details-marker{display:none}
     <div class="text-block">
       <div class="kicker">Čistenie a zapájanie</div>
       <h2>Čistíme studne a zapájame čerpadlá</h2>
-      <p>
-        Súčasťou služby nie je len samotné vŕtanie. Keď je studňa zanesená, vieme ju vyčistiť, odkalíme ju, skontrolujeme prítok a pripravíme ju na ďalšie používanie.
-        Pri nových aj existujúcich studniach zabezpečujeme aj zapojenie čerpadiel, tlakových nádrží, spínačov a celej technológie, aby systém fungoval stabilne a bez zbytočných výpadkov.
-      </p>
-      <h3>Čo pri tom robíme</h3>
-      <p>
-        Mechanické čistenie, vyplachovanie, odstraňovanie piesku a kalu, kontrola stavu vrtu, montáž čerpadla, nastavenie tlaku a skúška prevádzky.
-        Návštevník na stránke hneď pochopí, že nejde len o „vyvŕtanie diery“, ale o kompletný funkčný zdroj vody.
-      </p>
+      <p>Okrem vrtania poskytujeme aj čistenie studní, odstránenie piesku, kalu a usadenín, odkalovanie a kontrolu prietoku. Pri existujúcich aj nových studniach montujeme čerpadlá, tlakové nádoby, spínače a pripravujeme celý systém na používanie.</p>
+      <p>To je dôležité aj z obchodného pohľadu: zákazník nemusí hľadať viac firiem, pretože dostane jeden kontakt na celý proces. Na stránke preto neukazuješ len „vrtanie“, ale plnú hodnotu služby.</p>
     </div>
   </div>
 </section>
@@ -358,18 +226,14 @@ details.district summary::-webkit-details-marker{display:none}
 <section class="section">
   <div class="wrap">
     <h2>Doklady a legislatíva</h2>
-    <p class="section-intro">Toto je dôležitá informácia pre zákazníka aj pre SEO. Netvrdíme, že všetko je rovnaké všade — postup sa môže líšiť podľa lokality a úradu.</p>
     <div class="text-block">
-      <p>
-        Pri novej studni sa podľa lokality a typu pozemku zvyčajne rieši list vlastníctva, situačný nákres pozemku, vyjadrenie obce alebo príslušného úradu a podľa potreby aj vodoprávne ohlásenie alebo povolenie.
-        V náročnejších prípadoch môže byť potrebné hydrogeologické posúdenie. S podkladmi vám poradíme a poviem, čo je treba pripraviť ešte pred realizáciou.
-      </p>
-      <h3>Najčastejšie podklady</h3>
-      <p>• list vlastníctva alebo súhlas vlastníka<br>• situácia umiestnenia studne<br>• príslušné vyjadrenia podľa lokality<br>• dokumenty podľa typu stavby a úradu</p>
+      <p>Pred realizáciou sa v závislosti od lokality riešia základné podklady. Najčastejšie ide o list vlastníctva alebo súhlas vlastníka pozemku, situačný nákres a podklady, ktoré si môže vyžiadať miestny úrad alebo obec. V niektorých prípadoch je potrebné ohlásenie alebo povolenie a pri náročnejšom pozemku aj hydrogeologické podklady.</p>
+      <p>Naša úloha je vysvetliť, čo je potrebné v konkrétnom prípade pripraviť, aby sa zákazka nehýbala zbytočne pomaly. Týmto spôsobom ostáva web praktický, dôveryhodný a zároveň lokálne relevantný.</p>
       <div class="badge-row">
-        <span class="badge">📄 dokumenty podľa lokality</span>
-        <span class="badge">🧭 poradenstvo k podkladom</span>
-        <span class="badge">⚖️ postup podľa úradov</span>
+        <span class="badge">📄 list vlastníctva</span>
+        <span class="badge">🧭 situačný nákres</span>
+        <span class="badge">🏛️ vyjadrenie úradu</span>
+        <span class="badge">💧 podklady podľa lokality</span>
       </div>
     </div>
   </div>
@@ -377,376 +241,371 @@ details.district summary::-webkit-details-marker{display:none}
 
 <section class="section">
   <div class="wrap">
-    <div class="map-box">
-      <div id="map"></div>
-    </div>
+    <h2>Mapa pôsobenia</h2>
+    <div class="map-box"><div id="map"></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <h2>Okresné mestá a lokality</h2>
-    <p class="section-intro">Každý okres má svoju hlavnú stránku a ku nej päť ďalších lokalít. Toto je presne to, čo Google aj návštevník potrebujú vidieť.</p>
+    <p class="section-intro">Každý okres má vlastnú stránku a ku nej ďalšie lokality. To je dobrá architektúra aj pre SEO, aj pre používateľa.</p>
     <div class="accordion">
-
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Banská Bystrica</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-banska-bystrica.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-badin.html"><span>Badín</span><span>→</span></a><a class="city-link" href="vrtanie-studni-slovenska-lupca.html"><span>Slovenská Ľupča</span><span>→</span></a><a class="city-link" href="vrtanie-studni-selce.html"><span>Selce</span><span>→</span></a><a class="city-link" href="vrtanie-studni-spania-dolina.html"><span>Špania Dolina</span><span>→</span></a><a class="city-link" href="vrtanie-studni-kyncelova.html"><span>Kynceľová</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Banská Štiavnica</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-banska-stiavnica.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-hodrusa-hamre.html"><span>Hodruša-Hámre</span><span>→</span></a><a class="city-link" href="vrtanie-studni-stiavnicke-bane.html"><span>Štiavnické Bane</span><span>→</span></a><a class="city-link" href="vrtanie-studni-svaty-anton.html"><span>Svätý Anton</span><span>→</span></a><a class="city-link" href="vrtanie-studni-prencov.html"><span>Prenčov</span><span>→</span></a><a class="city-link" href="vrtanie-studni-pocuvadlo.html"><span>Počúvadlo</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Brezno</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-brezno.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-podbrezova.html"><span>Podbrezová</span><span>→</span></a><a class="city-link" href="vrtanie-studni-valaska.html"><span>Valaská</span><span>→</span></a><a class="city-link" href="vrtanie-studni-cierny-balog.html"><span>Čierny Balog</span><span>→</span></a><a class="city-link" href="vrtanie-studni-helpa.html"><span>Heľpa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-bacuch.html"><span>Bacúch</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Detva</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-detva.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-hrinova.html"><span>Hriňová</span><span>→</span></a><a class="city-link" href="vrtanie-studni-krivan.html"><span>Kriváň</span><span>→</span></a><a class="city-link" href="vrtanie-studni-viglas.html"><span>Vígľaš</span><span>→</span></a><a class="city-link" href="vrtanie-studni-podkrivan.html"><span>Podkriváň</span><span>→</span></a><a class="city-link" href="vrtanie-studni-dubravy.html"><span>Dúbravy</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Krupina</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-krupina.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-sebechleby.html"><span>Sebechleby</span><span>→</span></a><a class="city-link" href="vrtanie-studni-bzovik.html"><span>Bzovík</span><span>→</span></a><a class="city-link" href="vrtanie-studni-hontianske-nemce.html"><span>Hontianske Nemce</span><span>→</span></a><a class="city-link" href="vrtanie-studni-senohrad.html"><span>Senohrad</span><span>→</span></a><a class="city-link" href="vrtanie-studni-cabradsky-vrbovok.html"><span>Čabradský Vrbovok</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Lučenec</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-lucenec.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-filakovo.html"><span>Fiľakovo</span><span>→</span></a><a class="city-link" href="vrtanie-studni-kalinovo.html"><span>Kalinovo</span><span>→</span></a><a class="city-link" href="vrtanie-studni-rapovce.html"><span>Rapovce</span><span>→</span></a><a class="city-link" href="vrtanie-studni-divin.html"><span>Divín</span><span>→</span></a><a class="city-link" href="vrtanie-studni-pincina.html"><span>Pinciná</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Poltár</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-poltar.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-cinobana.html"><span>Cinobaňa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-kokava-nad-rimavicou.html"><span>Kokava nad Rimavicou</span><span>→</span></a><a class="city-link" href="vrtanie-studni-utekac.html"><span>Utekáč</span><span>→</span></a><a class="city-link" href="vrtanie-studni-hradiste.html"><span>Hradište</span><span>→</span></a><a class="city-link" href="vrtanie-studni-malinec.html"><span>Málinec</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Revúca</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-revuca.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-jelsava.html"><span>Jelšava</span><span>→</span></a><a class="city-link" href="vrtanie-studni-tornala.html"><span>Tornaľa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-muran.html"><span>Muráň</span><span>→</span></a><a class="city-link" href="vrtanie-studni-lubenik.html"><span>Lubeník</span><span>→</span></a><a class="city-link" href="vrtanie-studni-chyzne.html"><span>Chyžné</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Rimavská Sobota</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-rimavska-sobota.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-hnusta.html"><span>Hnúšťa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-tisovec.html"><span>Tisovec</span><span>→</span></a><a class="city-link" href="vrtanie-studni-jesenske.html"><span>Jesenské</span><span>→</span></a><a class="city-link" href="vrtanie-studni-klenovec.html"><span>Klenovec</span><span>→</span></a><a class="city-link" href="vrtanie-studni-rimavske-zaluzany.html"><span>Rimavské Zalužany</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Veľký Krtíš</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-velky-krtis.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-modry-kamen.html"><span>Modrý Kameň</span><span>→</span></a><a class="city-link" href="vrtanie-studni-vinica.html"><span>Vinica</span><span>→</span></a><a class="city-link" href="vrtanie-studni-nenince.html"><span>Nenince</span><span>→</span></a><a class="city-link" href="vrtanie-studni-dolna-strehova.html"><span>Dolná Strehová</span><span>→</span></a><a class="city-link" href="vrtanie-studni-balog-nad-iplom.html"><span>Balog nad Ipľom</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Zvolen</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-zvolen.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-sliac.html"><span>Sliač</span><span>→</span></a><a class="city-link" href="vrtanie-studni-zvolenska-slatina.html"><span>Zvolenská Slatina</span><span>→</span></a><a class="city-link" href="vrtanie-studni-pliesovce.html"><span>Pliešovce</span><span>→</span></a><a class="city-link" href="vrtanie-studni-sielnica.html"><span>Sielnica</span><span>→</span></a><a class="city-link" href="vrtanie-studni-ostra-luka.html"><span>Ostrá Lúka</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Žarnovica</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-zarnovica.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-nova-bana.html"><span>Nová Baňa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-zarnovica.html"><span>Žarnovica</span><span>→</span></a><a class="city-link" href="vrtanie-studni-hronsky-benadik.html"><span>Hronský Beňadik</span><span>→</span></a><a class="city-link" href="vrtanie-studni-tekovska-breznica.html"><span>Tekovská Breznica</span><span>→</span></a><a class="city-link" href="vrtanie-studni-orovnica.html"><span>Orovnica</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
-      <details class="district">
-        <summary>
-          <div class="sum-left">
-            <div class="sum-title">Vŕtanie studní Žiar nad Hronom</div>
-            <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
-          </div>
-          <div class="chev">▾</div>
-        </summary>
-        <div class="district-body">
-          <div class="badge-row">
-            <a class="badge" href="vrtanie-studni-ziar-nad-hronom.html" style="text-decoration:none">🏙️ okresná stránka</a>
-            <span class="badge">💧 60€ / meter</span>
-            <span class="badge">🗓️ obhliadka do 7 dní</span>
-          </div>
-          <div class="link-grid">
-    <a class="city-link" href="vrtanie-studni-kremnica.html"><span>Kremnica</span><span>→</span></a><a class="city-link" href="vrtanie-studni-hlinik-nad-hronom.html"><span>Hliník nad Hronom</span><span>→</span></a><a class="city-link" href="vrtanie-studni-trnava-hora.html"><span>Trnavá Hora</span><span>→</span></a><a class="city-link" href="vrtanie-studni-ladomerska-vieska.html"><span>Ladomerská Vieska</span><span>→</span></a><a class="city-link" href="vrtanie-studni-repiste.html"><span>Repište</span><span>→</span></a>
-          </div>
-        </div>
-      </details>
-    
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Banská Bystrica</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
     </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-banska-bystrica.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-badin.html"><span>Badín</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-slovenska-lupca.html"><span>Slovenská Ľupča</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-selce.html"><span>Selce</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-spania-dolina.html"><span>Špania Dolina</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-kyncelova.html"><span>Kynceľová</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Banská Štiavnica</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-banska-stiavnica.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-hodrusa-hamre.html"><span>Hodruša-Hámre</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-stiavnicke-bane.html"><span>Štiavnické Bane</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-svaty-anton.html"><span>Svätý Anton</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-prencov.html"><span>Prenčov</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-pocuvadlo.html"><span>Počúvadlo</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Brezno</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-brezno.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-podbrezova.html"><span>Podbrezová</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-valaska.html"><span>Valaská</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-cierny-balog.html"><span>Čierny Balog</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-helpa.html"><span>Heľpa</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-bacuch.html"><span>Bacúch</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Detva</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-detva.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-hrinova.html"><span>Hriňová</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-krivan.html"><span>Kriváň</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-viglas.html"><span>Vígľaš</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-podkrivan.html"><span>Podkriváň</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-dubravy.html"><span>Dúbravy</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Krupina</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-krupina.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-sebechleby.html"><span>Sebechleby</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-bzovik.html"><span>Bzovík</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-hontianske-nemce.html"><span>Hontianske Nemce</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-senohrad.html"><span>Senohrad</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-cabradsky-vrbovok.html"><span>Čabradský Vrbovok</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Lučenec</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-lucenec.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-filakovo.html"><span>Fiľakovo</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-kalinovo.html"><span>Kalinovo</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-rapovce.html"><span>Rapovce</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-divin.html"><span>Divín</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-pincina.html"><span>Pinciná</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Poltár</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-poltar.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-cinobana.html"><span>Cinobaňa</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-kokava-nad-rimavicou.html"><span>Kokava nad Rimavicou</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-utekac.html"><span>Utekáč</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-hradiste.html"><span>Hradište</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-malinec.html"><span>Málinec</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Revúca</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-revuca.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-jelsava.html"><span>Jelšava</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-tornala.html"><span>Tornaľa</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-muran.html"><span>Muráň</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-lubenik.html"><span>Lubeník</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-chyzne.html"><span>Chyžné</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Rimavská Sobota</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-rimavska-sobota.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-hnusta.html"><span>Hnúšťa</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-tisovec.html"><span>Tisovec</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-jesenske.html"><span>Jesenské</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-klenovec.html"><span>Klenovec</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-rimavske-zaluzany.html"><span>Rimavské Zalužany</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Veľký Krtíš</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-velky-krtis.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-modry-kamen.html"><span>Modrý Kameň</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-vinica.html"><span>Vinica</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-nenince.html"><span>Nenince</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-dolna-strehova.html"><span>Dolná Strehová</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-balog-nad-iplom.html"><span>Balog nad Ipľom</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Zvolen</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-zvolen.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-sliac.html"><span>Sliač</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-zvolenska-slatina.html"><span>Zvolenská Slatina</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-pliesovce.html"><span>Pliešovce</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-sielnica.html"><span>Sielnica</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-ostra-luka.html"><span>Ostrá Lúka</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Žarnovica</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-zarnovica.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-nova-bana.html"><span>Nová Baňa</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-hronsky-benadik.html"><span>Hronský Beňadik</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-tekovska-breznica.html"><span>Tekovská Breznica</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-orovnica.html"><span>Orovnica</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-horne-hamre.html"><span>Horné Hámre</span><span>→</span></a>
+</div></div></details>
+<details class="district">
+  <summary>
+    <div class="sum-left">
+      <div class="sum-title">Vŕtanie studní Žiar nad Hronom</div>
+      <div class="sum-sub">Okresná stránka + 5 lokalít v okolí</div>
+    </div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="district-body">
+    <div class="badge-row">
+      <a class="badge" href="vrtanie-studni-ziar-nad-hronom.html">🏙️ Otvoriť okres</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ obhliadka do 7 dní</span>
+    </div>
+    <div class="link-grid">
+<a class="city-link" href="vrtanie-studni-kremnica.html"><span>Kremnica</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-hlinik-nad-hronom.html"><span>Hliník nad Hronom</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-trnava-hora.html"><span>Trnavá Hora</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-ladomerska-vieska.html"><span>Ladomerská Vieska</span><span>→</span></a>
+<a class="city-link" href="vrtanie-studni-repiste.html"><span>Repište</span><span>→</span></a>
+</div></div></details></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="grid-3">
-      <div class="faq-item">
-        <h3>Obhliadka do 7 dní?</h3>
-        <p>Áno. Na hlavnej stránke to treba vidieť hneď a jasne. Toto je silný predajný argument aj SEO signál.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Vŕtanie do 30 dní?</h3>
-        <p>Áno. Po obhliadke vieme nastaviť termín do 30 dní, často aj skôr, podľa kapacity a lokality.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Čistenie a zapájanie?</h3>
-        <p>Robíme čistenie studní, zapájanie čerpadiel a technické sprevádzkovanie systému.</p>
-      </div>
-    </div>
+    <h2>Najčastejšie otázky</h2>
+    <div class="grid-3"><div class="faq-item"><h3>Kedy príde obhliadka?</h3><p>Obhliadku garantujeme do 7 dní, podľa voľného termínu často aj skôr.</p></div><div class="faq-item"><h3>Kedy prebehne vŕtanie?</h3><p>Vŕtanie realizujeme do 30 dní od obhliadky, často aj skôr.</p></div><div class="faq-item"><h3>Robíte aj čistenie?</h3><p>Áno, čistenie studní, odkalovanie a servis patria k bežným službám.</p></div><div class="faq-item"><h3>Zapojíte aj čerpadlo?</h3><p>Áno, zapájame čerpadlá, tlakové nádoby aj celú technológiu.</p></div><div class="faq-item"><h3>Je cena naozaj 60€ / meter?</h3><p>Áno, komunikujeme ju ako konečnú cenu / meter pri štandardnej ponuke.</p></div><div class="faq-item"><h3>Pomôžete aj s dokumentmi?</h3><p>Áno, vysvetlíme, aké podklady bývajú potrebné podľa lokality a typu realizácie.</p></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="text-block">
-      <div class="kicker">FAQ</div>
-      <h2>Často kladené otázky</h2>
-
-      <div class="faq-item" style="margin-top:14px">
-        <h3>Kedy príde obhliadka?</h3>
-        <p>Obhliadku garantujeme do 7 dní od kontaktu, podľa dostupnosti aj skôr.</p>
+      <div class="kicker">Zhrnutie</div>
+      <h2>Prečo tento web pôsobí silnejšie</h2>
+      <p>Hlavná stránka ukazuje cenu, postup, služby, fotografie, mapu aj legislatívne minimum. To je presne typ webu, ktorý pomáha používateľovi rozhodnúť sa rýchlo a zároveň vysiela Googlu jasné lokálne signály.</p>
+      <div class="badge-row">
+        <span class="badge">💧 60€ / meter</span>
+        <span class="badge">🗓️ obhliadka do 7 dní</span>
+        <span class="badge">⏱️ vŕtanie do 30 dní</span>
+        <a class="badge" href="tel:+421909163189">📞 Zavolať</a>
       </div>
-    
-      <div class="faq-item" style="margin-top:14px">
-        <h3>Ako rýchlo sa vŕta?</h3>
-        <p>Vŕtanie realizujeme do 30 dní od obhliadky, často aj skôr, ak je termín voľný.</p>
-      </div>
-    
-      <div class="faq-item" style="margin-top:14px">
-        <h3>Zabezpečíte aj čistenie?</h3>
-        <p>Áno. Robíme čistenie studní, odkalovanie a údržbu prietoku.</p>
-      </div>
-    
-      <div class="faq-item" style="margin-top:14px">
-        <h3>Zapojať viete aj čerpadlo?</h3>
-        <p>Áno. Zabezpečujeme aj zapájanie čerpadiel, tlakových nádob a celej technológie.</p>
-      </div>
-    
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="wrap">
-    <p><strong>Vŕtanie studní Banskobystrický kraj</strong> · studne na kľúč · čistenie studní · zapájanie čerpadiel · cena 60€ / meter</p>
+    <p><strong>Vŕtanie studní Banskobystrický kraj</strong> · studne na kľúč · čistenie studní · zapájanie čerpadiel · konečná cena 60€ / meter</p>
   </div>
 </footer>
-
 
 <div class="sticky-cta">
   <a class="btn primary" href="tel:+421909163189">📞 Zavolať</a>
   <a class="btn secondary" href="#map">🗺️ Mapa</a>
 </div>
 
+
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  const map = L.map('map').setView([48.62, 19.35], 8);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; OpenStreetMap'
-  }).addTo(map);
-L.marker([48.736, 19.146]).addTo(map).bindPopup('Banská Bystrica');
-L.marker([48.458, 18.899]).addTo(map).bindPopup('Banská Štiavnica');
-L.marker([48.806, 19.639]).addTo(map).bindPopup('Brezno');
-L.marker([48.559, 19.419]).addTo(map).bindPopup('Detva');
-L.marker([48.354, 19.063]).addTo(map).bindPopup('Krupina');
-L.marker([48.331, 19.667]).addTo(map).bindPopup('Lučenec');
-L.marker([48.433, 19.796]).addTo(map).bindPopup('Poltár');
-L.marker([48.683, 20.117]).addTo(map).bindPopup('Revúca');
-L.marker([48.381, 20.022]).addTo(map).bindPopup('Rimavská Sobota');
-L.marker([48.208, 19.353]).addTo(map).bindPopup('Veľký Krtíš');
-L.marker([48.576, 19.127]).addTo(map).bindPopup('Zvolen');
-L.marker([48.485, 18.716]).addTo(map).bindPopup('Žarnovica');
-L.marker([48.59, 18.853]).addTo(map).bindPopup('Žiar nad Hronom');
+const map = L.map('map').setView([48.62, 19.35], 8);
 
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+const icon = L.icon({
+  iconUrl: 'assets/marker.png',
+  iconSize: [40,40]
+});
+
+const locations = [
+["Banská Bystrica",48.736,19.146,"vrtanie-studni-banska-bystrica.html"],
+["Zvolen",48.576,19.127,"vrtanie-studni-zvolen.html"],
+["Detva",48.559,19.419,"vrtanie-studni-detva.html"],
+["Brezno",48.806,19.639,"vrtanie-studni-brezno.html"],
+["Lučenec",48.331,19.667,"vrtanie-studni-lucenec.html"]
+];
+
+let bounds = [];
+
+locations.forEach(l=>{
+  const m = L.marker([l[1],l[2]],{icon}).addTo(map);
+  m.bindPopup(`<b>${l[0]}</b><br><a href="${l[3]}">Otvoriť</a>`);
+  bounds.push([l[1],l[2]]);
+});
+
+map.fitBounds(bounds, {padding:[50,50]});
 </script>
+
+
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Vŕtanie studní Banskobystrický kraj",
-  "telephone": "+421909163189",
-  "areaServed": "Banskobystrický kraj",
-  "description": "Vŕtanie studní, čistenie studní, zapájanie čerpadiel a studne na kľúč."
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Vŕtanie studní Banskobystrický kraj",
+  "telephone":"+421909163189",
+  "areaServed":"Banskobystrický kraj",
+  "description":"Vŕtanie studní, čistenie studní, zapájanie čerpadiel a studne na kľúč."
 }
 </script>
-
 </body>
 </html>

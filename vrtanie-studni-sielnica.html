@@ -3,120 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vŕtanie studní Sielnica | Zvolen | 60€/m</title>
+<title>Vŕtanie studní Sielnica | Zvolen | 60€ / meter</title>
 <meta name="description" content="Vŕtanie studní Sielnica v okrese Zvolen. Studne na kľúč, čistenie studní, zapájanie čerpadiel. Obhliadka do 7 dní, realizácia do 30 dní.">
+<meta name="theme-color" content="#06111f">
 <link rel="icon" href="assets/logo.png">
 <style>
 :root{
-  --bg:#06111f;
-  --panel:#0b1d33;
-  --panel2:#0e2541;
-  --text:#f4fbff;
-  --muted:#c8dcef;
-  --accent:#37a7ff;
-  --accent2:#15d4c8;
-  --accent3:#ff9b38;
-  --line:rgba(255,255,255,.10);
-  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --bg:#06111f; --text:#f4fbff; --muted:#c8dcef; --accent:#37a7ff; --accent2:#15d4c8; --line:rgba(255,255,255,.10); --shadow:0 18px 60px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
-  radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
-  radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
-  linear-gradient(180deg, #06111f 0%, #071427 45%, #06111f 100%);
-  color:var(--text);line-height:1.7}
+body{
+  margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.72;
+  background:
+    radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
+    linear-gradient(180deg,#06111f 0%, #071427 45%, #06111f 100%);
+}
 a{color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.hero{
-  padding:28px 0 34px;
-  position:relative;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;
-  min-height:88vh;
-}
-.hero-copy,.hero-side,.section-card,.district-card,.faq-item,.service-card,.step,.photo-card{
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.hero{padding:26px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:24px;align-items:stretch;min-height:88vh}
+.hero-copy,.hero-side,.section-card,.faq-item,.service-card,.step,.photo-card,.district,.mini-card{
   border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  backdrop-filter: blur(6px);
-  box-shadow:var(--shadow);
+  backdrop-filter:blur(6px);box-shadow:var(--shadow)
 }
 .hero-copy{border-radius:28px;padding:28px;display:flex;flex-direction:column;justify-content:center}
 .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.brand img{width:92px;height:auto;filter: drop-shadow(0 12px 22px rgba(0,0,0,.32))}
+.brand img{width:96px;height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.32))}
 .brand-badge{
-  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em;
-  text-transform:uppercase;font-weight:800;color:#e5f6ff;background:rgba(55,167,255,.10);
-  border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:900;
+  color:#e5f6ff;background:rgba(55,167,255,.10);border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
 }
-h1{font-size:clamp(2.4rem,5vw,4.9rem);line-height:1.02;margin:0 0 14px}
-.lead{font-size:clamp(1.02rem,1.7vw,1.28rem);color:var(--muted);max-width:65ch}
+h1{font-size:clamp(2.35rem,5vw,5rem);line-height:1.02;margin:0 0 14px}
+.lead{font-size:clamp(1.03rem,1.7vw,1.3rem);color:var(--muted);max-width:68ch}
 .price-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 14px}
-.pill{
-  display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
-  font-weight:800;border:1px solid transparent
-}
-.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border-color:rgba(55,167,255,.40);color:#fff}
-.pill.time{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#f1fbff}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:900}
+.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(55,167,255,.40)}
+.pill.time{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  min-height:54px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
-  border:1px solid transparent;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;border:1px solid transparent
 }
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(135deg, #0f82ff, #37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
+.btn.primary{background:linear-gradient(135deg,#0f82ff,#37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
 .btn.secondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35);color:#e9f8ff}
-.hero-side{
-  border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start
-}
-.stats{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:14px
-}
-.stat{
-  border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));
-  border:1px solid rgba(255,255,255,.08)
-}
-.stat strong{display:block;font-size:1.35rem;color:#fff;margin-bottom:4px}
+.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35)}
+.hero-side{border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));border:1px solid rgba(255,255,255,.08)}
+.stat strong{display:block;font-size:1.35rem;margin-bottom:4px}
 .stat span{color:var(--muted);font-size:.95rem}
-.side-note{
-  border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));
-  border:1px solid rgba(55,167,255,.20)
-}
+.side-note{border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));border:1px solid rgba(55,167,255,.20)}
 .section{padding:30px 0 8px}
 .section h2{font-size:clamp(1.5rem,3vw,2.5rem);margin:0 0 10px}
-.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:70ch}
+.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:75ch}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service-card,.step,.photo-card,.faq-item{border-radius:24px;padding:20px}
-.service-card h3,.step h3,.faq-item h3{margin:0 0 8px;font-size:1.1rem}
-.service-card p,.step p,.faq-item p{margin:0;color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service-card,.step,.photo-card,.faq-item,.mini-card{border-radius:24px;padding:20px}
+.service-card h3,.step h3,.faq-item h3,.mini-card h3{margin:0 0 8px;font-size:1.1rem}
+.service-card p,.step p,.faq-item p,.mini-card p{margin:0;color:var(--muted)}
 .icon{
   width:44px;height:44px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px;
-  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));
-  border:1px solid rgba(255,255,255,.10)
+  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(255,255,255,.10)
 }
 .kicker{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#9fd8ff;font-weight:900}
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .step{position:relative;overflow:hidden}
 .step .num{
-  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));
-  width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
+  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
 }
 .photo-card{padding:0;overflow:hidden}
 .photo-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .photo-card .cap{padding:16px 18px;color:var(--muted)}
-.map-box{
-  border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d
+.text-block{
+  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  border:1px solid var(--line);box-shadow:var(--shadow)
 }
-#map{height:480px}
-.accordion{display:grid;gap:14px}
+.text-block p{color:var(--muted);margin:0 0 14px}
+.text-block h3{margin:20px 0 10px}
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700;text-decoration:none
+}
+.map-box{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d}
+#map{height:500px}
 details.district{
   border-radius:24px;border:1px solid var(--line);
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  box-shadow:var(--shadow);overflow:hidden
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));box-shadow:var(--shadow);overflow:hidden
 }
 details.district summary{
   list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px
@@ -129,33 +106,15 @@ details.district summary::-webkit-details-marker{display:none}
 .district-body{padding:0 20px 20px}
 .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .city-link{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;
-  padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);min-height:58px
+  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;padding:14px 16px;border-radius:16px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);min-height:58px
 }
 .city-link:hover{border-color:rgba(55,167,255,.35);background:rgba(55,167,255,.09)}
-.city-link span:last-child{color:#9fd8ff}
-.text-block{
-  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  border:1px solid var(--line);box-shadow:var(--shadow)
-}
-.text-block p{color:var(--muted);margin:0 0 14px}
-.text-block h3{margin:20px 0 10px}
-.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700
-}
-.faq-item{padding:18px 20px}
-.footer{
-  padding:34px 0 56px;color:#b6ccdf;font-size:.95rem
-}
-.sticky-cta{
-  position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px
-}
+.footer{padding:38px 0 64px;color:#b6ccdf;font-size:.95rem}
+.sticky-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px}
 .sticky-cta a{flex:1}
 @media (max-width: 980px){
-  .hero-grid,.grid-3,.grid-4,.timeline{grid-template-columns:1fr}
+  .hero-grid,.grid-3,.grid-4,.timeline,.grid-2{grid-template-columns:1fr}
   .link-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
   #map{height:360px}
@@ -170,14 +129,14 @@ details.district summary::-webkit-details-marker{display:none}
   .btn{width:100%}
   .cta-row{flex-direction:column}
 }
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid-2>*{min-width:0}</style>
+</style>
 </head>
 <body>
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="brand-badge">⚡ KONEČNÁ CENA LEN 60€ / meter</div>
+      <div class="brand-badge">⚡ Konečná cena len 60€ / meter</div>
       <div class="brand">
         <img src="assets/logo.png" alt="Logo firmy">
       </div>
@@ -185,179 +144,96 @@ details.district summary::-webkit-details-marker{display:none}
       <p class="lead">Lokalita Sielnica v okrese Zvolen. Konečná cena 60€ / meter, obhliadka do 7 dní a realizácia do 30 dní od obhliadky, často aj skôr.</p>
       <div class="price-row">
         <span class="pill price">💧 60€ / meter</span>
-        <span class="pill time">🗓️ Obhliadka do 7 dní</span>
-        <span class="pill time">⏱️ Vŕtanie do 30 dní, často skôr</span>
+        <span class="pill time">🗓️ obhliadka do 7 dní</span>
+        <span class="pill time">⏱️ vŕtanie do 30 dní, často skôr</span>
       </div>
       <div class="cta-row">
         <a class="btn primary" href="tel:+421909163189">📞 Zavolať teraz</a>
-        <a class="btn secondary" href="vrtanie-studni-zvolen.html#lokality">↩ Okresná stránka</a>
-        <a class="btn ghost" href="vrtanie-studni-zvolen.html">⬅ Späť</a>
+        <a class="btn secondary" href="#map">🗺️ Pozrieť mapu</a>
+        <a class="btn ghost" href="vrtanie-studni-zvolen.html">🏠 Hlavná stránka</a>
       </div>
     </div>
     <div class="hero-side">
       <div class="stats">
         <div class="stat"><strong>60€</strong><span>konečná cena za meter</span></div>
         <div class="stat"><strong>7 dní</strong><span>obhliadka garantovaná</span></div>
-        <div class="stat"><strong>30 dní</strong><span>realizácia po obhliadke</span></div>
+        <div class="stat"><strong>30 dní</strong><span>realizácia od obhliadky</span></div>
         <div class="stat"><strong>4 služby</strong><span>vrtanie, čistenie, čerpadlá, servis</span></div>
       </div>
       <div class="side-note">
         <div class="kicker">Čo robíme</div>
-        <p style="margin:10px 0 0;color:var(--muted)">
-          Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.
-        </p>
+        <p style="margin:10px 0 0;color:var(--muted)">Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<div class="wrap">
-  <div class="text-block">
-    <div class="kicker">Cena a termíny</div>
-    <h2>Vŕtanie studní Sielnica – konečná cena 60€ / meter</h2>
-    <p>Vrtanie studní Sielnica realizujeme pre rodinné domy, chaty, záhrady aj pozemky, kde je potrebné stabilné a dlhodobo spoľahlivé riešenie vody. Každý projekt riešime individuálne podľa podložia, požadovaného prietoku a technického umiestnenia technológie.</p>
-    <p><strong>V každej objednávke komunikujeme rovno cenu 60€ / meter.</strong> Bez zbytočných poznámok a bez toho, aby zákazník musel hádať, koľko bude stáť výsledok. Presnú realizáciu nastavíme podľa situácie na pozemku, ale hlavný cenový rámec je jasný od začiatku.</p>
-    <p>Keďže v Zvolen bývajú rozdielne geologické podmienky, pri každom zákazníkovi volíme rozumný a technicky bezpečný postup.</p>
-    <div class="badge-row"><span class="badge">💧 vŕtanie studní Sielnica</span><span class="badge">🧽 čistenie studní Sielnica</span><span class="badge">⚙️ zapájanie čerpadiel Sielnica</span><span class="badge">📄 dokumenty podľa lokality</span><span class="badge">🗓️ obhliadka do 7 dní</span></div>
-  </div>
-
-  <div class="section">
-    <h2>Ako prebieha vrtanie studne v Sielnica</h2>
-    <div class="grid-3">
-
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Obhliadka do 7 dní</h3>
-        <p>Prídeme na miesto, zhodnotíme podmienky, navrhneme hĺbku a technológiu.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Príprava a dokumenty</h3>
-        <p>Pomôžeme so zoznamom podkladov podľa lokality a typu realizácie.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Vŕtanie</h3>
-        <p>Realizujeme vrt s dôrazom na čistotu, presnosť a životnosť zdroja.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">04</div>
-        <h3>Čistenie a vystrojenie</h3>
-        <p>Studňu vyčistíme, vystrojíme a pripravíme na stabilnú prevádzku.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">05</div>
-        <h3>Zapojenie a odovzdanie</h3>
-        <p>Zapojíme čerpadlo, otestujeme systém a studňu odovzdáme pripravenú na používanie.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Čistenie studní a zapájanie čerpadiel</h2>
-    <div class="grid-3">
-
-      <div class="service-card">
-        <div class="icon">💧</div>
-        <h3>Vŕtanie studní Sielnica</h3>
-        <p>Presné vŕtanie podľa podložia a požadovaného prietoku vody.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">🧽</div>
-        <h3>Čistenie studní Sielnica</h3>
-        <p>Mechanické a hydraulické čistenie, odkalovanie a obnova prietoku.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">⚙️</div>
-        <h3>Zapájanie čerpadiel Sielnica</h3>
-        <p>Montáž čerpadiel, tlakových nádob a kompletnej technológie.</p>
-      </div>
-
-    </div>
-    <p style="margin-top:18px;color:var(--muted)">
-      Pri starších studniach robíme aj prehĺbenie, kontrolu stavu vrtu a odporúčanie ďalšieho postupu. Klient tak dostane riešenie, ktoré nie je len rýchle, ale aj technicky rozumné.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Legislatíva a dokumenty</h2>
+<section class="section">
+  <div class="wrap">
     <div class="text-block">
-      <p>
-        Pred realizáciou je dobré mať pripravené základné podklady. Zvyčajne ide o list vlastníctva alebo súhlas vlastníka pozemku, situačný nákres miesta a podľa lokality aj ďalšie podklady, ktoré si môže vyžiadať obec alebo príslušný úrad.
-        Pri niektorých pozemkoch sa rieši aj ohlásenie, vodoprávne povolenie alebo hydrogeologické podklady.
-      </p>
-      <p>
-        So zákazníkom prejdeme, čo je potrebné v konkrétnom prípade vybaviť. Cieľom je, aby bola realizácia plynulá a bez zbytočných prieťahov.
-      </p>
-      <div class="badge-row">• list vlastníctva alebo súhlas vlastníka pozemku<br>• situácia pozemku alebo zakreslenie umiestnenia studne<br>• podklady podľa lokality, ktoré si vyžiada príslušný úrad<br>• pri niektorých prípadoch vodoprávne ohlásenie alebo povolenie<br>• pri náročnejších pozemkoch aj hydrogeologické posúdenie<br></div>
+      <div class="kicker">Cena a termíny</div>
+      <h2>Vŕtanie studní Sielnica – konečná cena 60€ / meter</h2>
+      <p>Pre Sielnica a okolie zabezpečujeme studne na kľúč od prvého kontaktu až po spustenie vody. Každý projekt riešime podľa podložia, prístupu techniky a potreby konkrétnej domácnosti alebo pozemku.</p>
+      <p>Našou silnou stránkou je kompletné riešenie. Neriešime len samotný vrt, ale aj čistenie studní, zapájanie čerpadiel, tlakové nádoby a údržbu technológie. Zákazník tak dostane celý proces pod jednou strechou.</p>
+      <p>Pri zákazkách v okolí Zvolen sa často stretávame s rôznymi typmi parciel. Preto je dôležitý rozumný návrh riešenia, nie univerzálny postup pre všetky miesta.</p>
+      <p>V okolí Sielnica často riešime aj zákazky v ďalších lokalitách okresu Zvolen. Každú objednávku vedieme tak, aby bol termín jasný, komunikácia zrozumiteľná a výsledok funkčný.</p>
+      <p>Ak chcete jasnú cenu, rýchly termín a kompletné riešenie vody, kontaktujte nás. Na stránke Sielnica máte presne to, čo potrebujete vedieť bez zbytočného hľadania.</p>
+      <div class="badge-row">
+        <span class="badge">💧 Sielnica</span>
+        <span class="badge">🏙️ Zvolen</span>
+        <span class="badge">💶 60€ / meter</span>
+        <span class="badge">🗓️ obhliadka do 7 dní</span>
+        <span class="badge">⏱️ vŕtanie do 30 dní</span>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>Fotky z praxe</h2>
-    <div class="grid-4">
-      <div class="photo-card"><img src="assets/photo-vrtanie.png" alt="Vŕtanie studní" loading="lazy"><div class="cap">Vŕtanie studní v praxi</div></div>
-      <div class="photo-card"><img src="assets/photo-cistenie.png" alt="Čistenie studní" loading="lazy"><div class="cap">Čistenie a odkalovanie</div></div>
-      <div class="photo-card"><img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla" loading="lazy"><div class="cap">Zapojenie čerpadla</div></div>
-      <div class="photo-card"><img src="assets/photo-hotovo.png" alt="Hotová studňa" loading="lazy"><div class="cap">Hotová studňa na kľúč</div></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Najčastejšie otázky</h2>
-    <div class="grid-2"></div>
+<section class="section">
+  <div class="wrap">
+    <h2>Čo robíme v Sielnica</h2>
     <div class="grid-3">
-
-      <div class="faq-item">
-        <h3>Kedy príde obhliadka?</h3>
-        <p>Obhliadku garantujeme do 7 dní od kontaktu, podľa dostupnosti aj skôr.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Ako rýchlo sa vŕta?</h3>
-        <p>Vŕtanie realizujeme do 30 dní od obhliadky, často aj skôr, ak je termín voľný.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Zabezpečíte aj čistenie?</h3>
-        <p>Áno. Robíme čistenie studní, odkalovanie a údržbu prietoku.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Zapojať viete aj čerpadlo?</h3>
-        <p>Áno. Zabezpečujeme aj zapájanie čerpadiel, tlakových nádob a celej technológie.</p>
-      </div>
-
+      <div class="mini-card"><h3>Obhliadka</h3><p>Skontrolujeme miesto, prístup aj vhodnosť vrtu podľa lokality a podložia.</p></div>
+      <div class="mini-card"><h3>Vŕtanie a čistenie</h3><p>Po obhliadke zrealizujeme vrt, vyčistenie a technické dokončenie studne.</p></div>
+      <div class="mini-card"><h3>Zapojenie čerpadla</h3><p>Ak treba, zapojíme aj čerpadlo a pripravíme celý systém na používanie.</p></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Legislatíva a podklady</h2>
+    <div class="text-block">
+      <p>Pri realizácii v Sielnica platí to isté ako inde: podľa lokality môžu byť potrebné základné podklady, situácia pozemku, súhlas vlastníka alebo ďalšie náležitosti podľa úradu. S tým vieme pomôcť už pri prvom kontakte.</p>
+      <p>V prípade Zvolen ide často o kombináciu praktickej obhliadky a technického posúdenia, aby sa všetko pripravilo bez zbytočných prieťahov.</p>
+      <div class="badge-row">
+        <span class="badge">📄 podklady podľa lokality</span>
+        <span class="badge">🧭 obhliadka na mieste</span>
+        <span class="badge">🏛️ informácie k úradom</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Fotky z realizácií</h2>
+    <div class="grid-4"><div class="photo-card"><img src="assets/photo-vrtanie.png" alt="Vŕtanie studní v praxi" loading="lazy"><div class="cap">Vŕtanie studní v praxi</div></div><div class="photo-card"><img src="assets/photo-cistenie.png" alt="Čistenie a odkalovanie" loading="lazy"><div class="cap">Čistenie a odkalovanie</div></div><div class="photo-card"><img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla" loading="lazy"><div class="cap">Zapojenie čerpadla</div></div><div class="photo-card"><img src="assets/photo-hotovo.png" alt="Hotová studňa na kľúč" loading="lazy"><div class="cap">Hotová studňa na kľúč</div></div></div>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
     <div class="text-block">
+      <div class="kicker">Hlavný benefit</div>
       <h2>Prečo riešiť studňu v Sielnica</h2>
-      <p>
-        Pri lokalite Sielnica vieme navrhnúť vhodný postup podľa prístupu na pozemok, očakávaného využitia vody a technickej potreby domácnosti alebo objektu.
-        Dôležitá je presná obhliadka, správny návrh a čisté prevedenie. Preto je pre nás štandardom obhliadka do 7 dní a následné vŕtanie do 30 dní od obhliadky, často aj skôr.
-      </p>
-      <p>
-        Ak klient potrebuje riešiť aj staršiu studňu, vieme ju vyčistiť, skontrolovať, zapojiť čerpadlo a pripraviť na dlhodobé používanie.
-        Týmto spôsobom dostane jednu firmu na celý proces namiesto viacerých dodávateľov.
-      </p>
+      <p>Pri nových zákazkách v Sielnica sa sústredíme na praktický výsledok: čistý vrt, rozumný termín, jasnú komunikáciu a technické odovzdanie bez zbytočných komplikácií.</p>
+      <p>Ak zákazník potrebuje aj čistenie studne alebo zapojenie čerpadla, vieme spojiť viac prác do jedného výjazdu. To šetrí čas aj náklady.</p>
       <div class="badge-row">
-        <span class="badge">💧 Sielnica</span>
-        <span class="badge">🏙️ Zvolen</span>
-        <span class="badge">💧 cena 60€ / meter</span>
-        <span class="badge">🗓️ do 7 dní obhliadka</span>
-        <span class="badge">⏱️ do 30 dní vrtanie</span>
+        <a class="badge" href="index.html">🏠 Hlavná stránka</a>
+        <a class="badge" href="vrtanie-studni-zvolen.html">↩ Okres Zvolen</a>
+        <span class="badge">💧 60€ / meter</span>
       </div>
     </div>
   </div>
@@ -368,5 +244,15 @@ details.district summary::-webkit-details-marker{display:none}
   <a class="btn secondary" href="vrtanie-studni-zvolen.html">🏙️ Okres</a>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Vŕtanie studní Sielnica",
+  "telephone":"+421909163189",
+  "areaServed":"Sielnica, Zvolen",
+  "description":"Vŕtanie studní, čistenie studní, zapájanie čerpadiel a studne na kľúč."
+}
+</script>
 </body>
 </html>

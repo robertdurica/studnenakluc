@@ -5,118 +5,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vŕtanie studní Brezno | Studne na kľúč od 60€/m</title>
 <meta name="description" content="Vŕtanie studní Brezno a okolie. Studne na kľúč, čistenie studní, zapájanie čerpadiel. Obhliadka do 7 dní, realizácia do 30 dní.">
+<meta name="theme-color" content="#06111f">
 <link rel="icon" href="assets/logo.png">
 <style>
 :root{
-  --bg:#06111f;
-  --panel:#0b1d33;
-  --panel2:#0e2541;
-  --text:#f4fbff;
-  --muted:#c8dcef;
-  --accent:#37a7ff;
-  --accent2:#15d4c8;
-  --accent3:#ff9b38;
-  --line:rgba(255,255,255,.10);
-  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --bg:#06111f; --text:#f4fbff; --muted:#c8dcef; --accent:#37a7ff; --accent2:#15d4c8; --line:rgba(255,255,255,.10); --shadow:0 18px 60px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
-  radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
-  radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
-  linear-gradient(180deg, #06111f 0%, #071427 45%, #06111f 100%);
-  color:var(--text);line-height:1.7}
+body{
+  margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);line-height:1.72;
+  background:
+    radial-gradient(circle at top left, rgba(55,167,255,.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(21,212,200,.10), transparent 25%),
+    linear-gradient(180deg,#06111f 0%, #071427 45%, #06111f 100%);
+}
 a{color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-.hero{
-  padding:28px 0 34px;
-  position:relative;
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;
-  min-height:88vh;
-}
-.hero-copy,.hero-side,.section-card,.district-card,.faq-item,.service-card,.step,.photo-card{
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.hero{padding:26px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:24px;align-items:stretch;min-height:88vh}
+.hero-copy,.hero-side,.section-card,.faq-item,.service-card,.step,.photo-card,.district,.mini-card{
   border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  backdrop-filter: blur(6px);
-  box-shadow:var(--shadow);
+  backdrop-filter:blur(6px);box-shadow:var(--shadow)
 }
 .hero-copy{border-radius:28px;padding:28px;display:flex;flex-direction:column;justify-content:center}
 .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.brand img{width:92px;height:auto;filter: drop-shadow(0 12px 22px rgba(0,0,0,.32))}
+.brand img{width:96px;height:auto;filter:drop-shadow(0 12px 22px rgba(0,0,0,.32))}
 .brand-badge{
-  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em;
-  text-transform:uppercase;font-weight:800;color:#e5f6ff;background:rgba(55,167,255,.10);
-  border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;font-weight:900;
+  color:#e5f6ff;background:rgba(55,167,255,.10);border:1px solid rgba(55,167,255,.25);padding:10px 14px;border-radius:999px;margin-bottom:16px
 }
-h1{font-size:clamp(2.4rem,5vw,4.9rem);line-height:1.02;margin:0 0 14px}
-.lead{font-size:clamp(1.02rem,1.7vw,1.28rem);color:var(--muted);max-width:65ch}
+h1{font-size:clamp(2.35rem,5vw,5rem);line-height:1.02;margin:0 0 14px}
+.lead{font-size:clamp(1.03rem,1.7vw,1.3rem);color:var(--muted);max-width:68ch}
 .price-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 14px}
-.pill{
-  display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;
-  font-weight:800;border:1px solid transparent
-}
-.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border-color:rgba(55,167,255,.40);color:#fff}
-.pill.time{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#f1fbff}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;font-weight:900}
+.pill.price{background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(55,167,255,.40)}
+.pill.time{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  min-height:54px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
-  border:1px solid transparent;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 20px;border-radius:16px;text-decoration:none;font-weight:900;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;border:1px solid transparent
 }
 .btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(135deg, #0f82ff, #37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
+.btn.primary{background:linear-gradient(135deg,#0f82ff,#37a7ff);box-shadow:0 18px 30px rgba(15,130,255,.22)}
 .btn.secondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35);color:#e9f8ff}
-.hero-side{
-  border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start
-}
-.stats{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:14px
-}
-.stat{
-  border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));
-  border:1px solid rgba(255,255,255,.08)
-}
-.stat strong{display:block;font-size:1.35rem;color:#fff;margin-bottom:4px}
+.btn.ghost{background:transparent;border-color:rgba(55,167,255,.35)}
+.hero-side{border-radius:28px;padding:22px;display:grid;gap:14px;align-content:start}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{border-radius:20px;padding:18px;background:linear-gradient(180deg, rgba(9,29,51,.92), rgba(12,35,59,.65));border:1px solid rgba(255,255,255,.08)}
+.stat strong{display:block;font-size:1.35rem;margin-bottom:4px}
 .stat span{color:var(--muted);font-size:.95rem}
-.side-note{
-  border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));
-  border:1px solid rgba(55,167,255,.20)
-}
+.side-note{border-radius:22px;padding:18px;background:linear-gradient(135deg, rgba(55,167,255,.13), rgba(21,212,200,.07));border:1px solid rgba(55,167,255,.20)}
 .section{padding:30px 0 8px}
 .section h2{font-size:clamp(1.5rem,3vw,2.5rem);margin:0 0 10px}
-.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:70ch}
+.section p.section-intro{margin:0 0 20px;color:var(--muted);max-width:75ch}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service-card,.step,.photo-card,.faq-item{border-radius:24px;padding:20px}
-.service-card h3,.step h3,.faq-item h3{margin:0 0 8px;font-size:1.1rem}
-.service-card p,.step p,.faq-item p{margin:0;color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.service-card,.step,.photo-card,.faq-item,.mini-card{border-radius:24px;padding:20px}
+.service-card h3,.step h3,.faq-item h3,.mini-card h3{margin:0 0 8px;font-size:1.1rem}
+.service-card p,.step p,.faq-item p,.mini-card p{margin:0;color:var(--muted)}
 .icon{
   width:44px;height:44px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px;
-  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));
-  border:1px solid rgba(255,255,255,.10)
+  background:linear-gradient(135deg, rgba(55,167,255,.22), rgba(21,212,200,.14));border:1px solid rgba(255,255,255,.10)
 }
 .kicker{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#9fd8ff;font-weight:900}
 .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .step{position:relative;overflow:hidden}
 .step .num{
-  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));
-  width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
+  font-size:12px;font-weight:900;color:#06111f;background:linear-gradient(135deg,var(--accent),var(--accent2));width:max-content;padding:8px 10px;border-radius:999px;margin-bottom:12px
 }
 .photo-card{padding:0;overflow:hidden}
 .photo-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .photo-card .cap{padding:16px 18px;color:var(--muted)}
-.map-box{
-  border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d
+.text-block{
+  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  border:1px solid var(--line);box-shadow:var(--shadow)
 }
-#map{height:480px}
-.accordion{display:grid;gap:14px}
+.text-block p{color:var(--muted);margin:0 0 14px}
+.text-block h3{margin:20px 0 10px}
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700;text-decoration:none
+}
+.map-box{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#091a2d}
+#map{height:500px}
 details.district{
   border-radius:24px;border:1px solid var(--line);
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  box-shadow:var(--shadow);overflow:hidden
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));box-shadow:var(--shadow);overflow:hidden
 }
 details.district summary{
   list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px
@@ -129,33 +106,15 @@ details.district summary::-webkit-details-marker{display:none}
 .district-body{padding:0 20px 20px}
 .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .city-link{
-  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;
-  padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);min-height:58px
+  display:flex;align-items:center;justify-content:space-between;gap:10px;text-decoration:none;padding:14px 16px;border-radius:16px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);min-height:58px
 }
 .city-link:hover{border-color:rgba(55,167,255,.35);background:rgba(55,167,255,.09)}
-.city-link span:last-child{color:#9fd8ff}
-.text-block{
-  border-radius:28px;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  border:1px solid var(--line);box-shadow:var(--shadow)
-}
-.text-block p{color:var(--muted);margin:0 0 14px}
-.text-block h3{margin:20px 0 10px}
-.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#eefbff;font-weight:700
-}
-.faq-item{padding:18px 20px}
-.footer{
-  padding:34px 0 56px;color:#b6ccdf;font-size:.95rem
-}
-.sticky-cta{
-  position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px
-}
+.footer{padding:38px 0 64px;color:#b6ccdf;font-size:.95rem}
+.sticky-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;display:none;gap:10px}
 .sticky-cta a{flex:1}
 @media (max-width: 980px){
-  .hero-grid,.grid-3,.grid-4,.timeline{grid-template-columns:1fr}
+  .hero-grid,.grid-3,.grid-4,.timeline,.grid-2{grid-template-columns:1fr}
   .link-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
   #map{height:360px}
@@ -170,14 +129,14 @@ details.district summary::-webkit-details-marker{display:none}
   .btn{width:100%}
   .cta-row{flex-direction:column}
 }
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.grid-2>*{min-width:0}</style>
+</style>
 </head>
 <body>
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="brand-badge">⚡ KONEČNÁ CENA LEN 60€ / meter</div>
+      <div class="brand-badge">⚡ Konečná cena len 60€ / meter</div>
       <div class="brand">
         <img src="assets/logo.png" alt="Logo firmy">
       </div>
@@ -185,184 +144,120 @@ details.district summary::-webkit-details-marker{display:none}
       <p class="lead">Okresná stránka pre Brezno s jasnou cenou 60€ / meter, obhliadkou do 7 dní a vŕtaním do 30 dní od obhliadky, často aj skôr.</p>
       <div class="price-row">
         <span class="pill price">💧 60€ / meter</span>
-        <span class="pill time">🗓️ Obhliadka do 7 dní</span>
-        <span class="pill time">⏱️ Vŕtanie do 30 dní, často skôr</span>
+        <span class="pill time">🗓️ obhliadka do 7 dní</span>
+        <span class="pill time">⏱️ vŕtanie do 30 dní, často skôr</span>
       </div>
       <div class="cta-row">
         <a class="btn primary" href="tel:+421909163189">📞 Zavolať teraz</a>
-        <a class="btn secondary" href="#lokality">🏷️ Pozrieť lokality</a>
-        <a class="btn ghost" href="index.html">⬅ Späť</a>
+        <a class="btn secondary" href="#map">🗺️ Pozrieť mapu</a>
+        <a class="btn ghost" href="index.html">🏠 Hlavná stránka</a>
       </div>
     </div>
     <div class="hero-side">
       <div class="stats">
         <div class="stat"><strong>60€</strong><span>konečná cena za meter</span></div>
         <div class="stat"><strong>7 dní</strong><span>obhliadka garantovaná</span></div>
-        <div class="stat"><strong>30 dní</strong><span>realizácia po obhliadke</span></div>
+        <div class="stat"><strong>30 dní</strong><span>realizácia od obhliadky</span></div>
         <div class="stat"><strong>4 služby</strong><span>vrtanie, čistenie, čerpadlá, servis</span></div>
       </div>
       <div class="side-note">
         <div class="kicker">Čo robíme</div>
-        <p style="margin:10px 0 0;color:var(--muted)">
-          Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.
-        </p>
+        <p style="margin:10px 0 0;color:var(--muted)">Vrtáme studne na kľúč, čistíme zanesené studne, zapájame čerpadlá a pripravujeme technológiu tak, aby bola dlhodobo spoľahlivá.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<div class="wrap">
-  <div class="text-block">
-    <div class="kicker">Cena a termíny</div>
-    <h2>Vŕtanie studní Brezno – konečná cena 60€ / meter</h2>
-    <p>Ak hľadáte spoľahlivé vŕtanie studní v lokalite Brezno a okolí, ste na správnej adrese. Pracujeme rýchlo, prehľadne a bez zbytočných obkecov. Hlavná výhoda pre zákazníka je jednoduchá: konečná cena 60€ / meter, obhliadka do 7 dní a realizácia do 30 dní od obhliadky, často aj skôr.</p>
-    <p><strong>V každej objednávke komunikujeme rovno cenu 60€ / meter.</strong> Bez zbytočných poznámok a bez toho, aby zákazník musel hádať, koľko bude stáť výsledok. Presnú realizáciu nastavíme podľa situácie na pozemku, ale hlavný cenový rámec je jasný od začiatku.</p>
-    <p>V rámci okresu Brezno obsluhujeme aj širšie okolie a vieme sa prispôsobiť prístupovým možnostiam pozemku.</p>
-    <div class="badge-row"><span class="badge">💧 vŕtanie studní Brezno</span><span class="badge">🧽 čistenie studní Brezno</span><span class="badge">⚙️ zapájanie čerpadiel Brezno</span><span class="badge">📄 dokumenty podľa lokality</span><span class="badge">🗓️ obhliadka do 7 dní</span></div>
-  </div>
-
-  <div class="section">
-    <h2>Ako prebieha vrtanie studne v Brezno</h2>
-    <div class="grid-3">
-
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Obhliadka do 7 dní</h3>
-        <p>Prídeme na miesto, zhodnotíme podmienky, navrhneme hĺbku a technológiu.</p>
+<section class="section">
+  <div class="wrap">
+    <div class="text-block">
+      <div class="kicker">Cena a termíny</div>
+      <h2>Vŕtanie studní Brezno – konečná cena 60€ / meter</h2>
+      <p>Stránka pre Brezno má vysvetliť jednoduchú vec: čo robíme, ako rýchlo prídeme, čo je v cene a čo treba vybaviť pred realizáciou. Presne to ľudia hľadajú pri rozhodovaní.</p>
+      <p>Keď sa rieši studňa na kľúč, nejde len o výkop a hotovo. Dôležité je vhodné osadenie, čisté prevedenie, dobrý prietok a funkčný systém. Preto komunikujeme aj servis a zapájanie technológie.</p>
+      <p>Pri zákazkách v okolí Brezno sa často stretávame s rôznymi typmi parciel. Preto je dôležitý rozumný návrh riešenia, nie univerzálny postup pre všetky miesta.</p>
+      <p>V okrese Brezno je dôležité počítať s tým, že nie každý pozemok je rovnaký. Práve preto komunikujeme obhliadku do 7 dní a po nej vieme realisticky naplánovať vŕtanie do 30 dní, často aj skôr.</p>
+      <p>Ak klient ešte nemá všetko pripravené, vysvetlíme mu, čo je potrebné doplniť. Na stránke preto uvádzame aj informácie o dokumentoch, aby bol celý proces zrozumiteľný ešte pred telefonátom.</p>
+      <div class="badge-row">
+        <span class="badge">💧 vŕtanie studní Brezno</span>
+        <span class="badge">🧽 čistenie studní Brezno</span>
+        <span class="badge">⚙️ zapájanie čerpadiel Brezno</span>
+        <span class="badge">💶 60€ / meter</span>
+        <span class="badge">🗓️ obhliadka do 7 dní</span>
       </div>
-
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Príprava a dokumenty</h3>
-        <p>Pomôžeme so zoznamom podkladov podľa lokality a typu realizácie.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Vŕtanie</h3>
-        <p>Realizujeme vrt s dôrazom na čistotu, presnosť a životnosť zdroja.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">04</div>
-        <h3>Čistenie a vystrojenie</h3>
-        <p>Studňu vyčistíme, vystrojíme a pripravíme na stabilnú prevádzku.</p>
-      </div>
-
-      <div class="step">
-        <div class="num">05</div>
-        <h3>Zapojenie a odovzdanie</h3>
-        <p>Zapojíme čerpadlo, otestujeme systém a studňu odovzdáme pripravenú na používanie.</p>
-      </div>
-
     </div>
   </div>
+</section>
 
-  <div class="section">
+<section class="section">
+  <div class="wrap">
+    <h2>Ako pracujeme v okrese Brezno</h2>
+    <div class="grid-3">
+      <div class="mini-card"><h3>Obhliadka</h3><p>Brezno má Horehronie, lesné pozemky a dôraz na dobrý prístup techniky. Na obhliadke zistíme prístup, miesto vrtu a odporučíme postup.</p></div>
+      <div class="mini-card"><h3>Realizácia</h3><p>Po odsúhlasení termínu zabezpečíme vrtanie, čistenie a vystrojenie tak, aby výsledok bol funkčný a dlhodobo použiteľný.</p></div>
+      <div class="mini-card"><h3>Odovzdanie</h3><p>Na záver vieme zapojiť čerpadlo, nastaviť technológiu a odovzdať celý systém pripravený na používanie.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
     <h2>Čistenie studní a zapájanie čerpadiel</h2>
     <div class="grid-3">
-
-      <div class="service-card">
-        <div class="icon">💧</div>
-        <h3>Vŕtanie studní Brezno</h3>
-        <p>Presné vŕtanie podľa podložia a požadovaného prietoku vody.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">🧽</div>
-        <h3>Čistenie studní Brezno</h3>
-        <p>Mechanické a hydraulické čistenie, odkalovanie a obnova prietoku.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="icon">⚙️</div>
-        <h3>Zapájanie čerpadiel Brezno</h3>
-        <p>Montáž čerpadiel, tlakových nádob a kompletnej technológie.</p>
-      </div>
-
-    </div>
-    <p style="margin-top:18px;color:var(--muted)">
-      Pri starších studniach robíme aj prehĺbenie, kontrolu stavu vrtu a odporúčanie ďalšieho postupu. Klient tak dostane riešenie, ktoré nie je len rýchle, ale aj technicky rozumné.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Legislatíva a dokumenty</h2>
-    <div class="text-block">
-      <p>
-        Pred realizáciou je dobré mať pripravené základné podklady. Zvyčajne ide o list vlastníctva alebo súhlas vlastníka pozemku, situačný nákres miesta a podľa lokality aj ďalšie podklady, ktoré si môže vyžiadať obec alebo príslušný úrad.
-        Pri niektorých pozemkoch sa rieši aj ohlásenie, vodoprávne povolenie alebo hydrogeologické podklady.
-      </p>
-      <p>
-        So zákazníkom prejdeme, čo je potrebné v konkrétnom prípade vybaviť. Cieľom je, aby bola realizácia plynulá a bez zbytočných prieťahov.
-      </p>
-      <div class="badge-row">• list vlastníctva alebo súhlas vlastníka pozemku<br>• situácia pozemku alebo zakreslenie umiestnenia studne<br>• podklady podľa lokality, ktoré si vyžiada príslušný úrad<br>• pri niektorých prípadoch vodoprávne ohlásenie alebo povolenie<br>• pri náročnejších pozemkoch aj hydrogeologické posúdenie<br></div>
+      <div class="service-card"><div class="icon">🧽</div><h3>Čistenie studní Brezno</h3><p>Odkalovanie, odstránenie piesku a nánosov, obnova prietoku a kontrola stavu vrtu.</p></div>
+      <div class="service-card"><div class="icon">⚙️</div><h3>Zapájanie čerpadiel Brezno</h3><p>Montáž čerpadiel, tlakových nádob, spínačov a celej technológie.</p></div>
+      <div class="service-card"><div class="icon">💧</div><h3>Studne na kľúč Brezno</h3><p>Kompletné riešenie od obhliadky až po funkčnú studňu s technikou.</p></div>
     </div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>Fotky z praxe</h2>
-    <div class="grid-4">
-      <div class="photo-card"><img src="assets/photo-vrtanie.png" alt="Vŕtanie studní" loading="lazy"><div class="cap">Vŕtanie studní v praxi</div></div>
-      <div class="photo-card"><img src="assets/photo-cistenie.png" alt="Čistenie studní" loading="lazy"><div class="cap">Čistenie a odkalovanie</div></div>
-      <div class="photo-card"><img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla" loading="lazy"><div class="cap">Zapojenie čerpadla</div></div>
-      <div class="photo-card"><img src="assets/photo-hotovo.png" alt="Hotová studňa" loading="lazy"><div class="cap">Hotová studňa na kľúč</div></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Miesta v okolí Brezno</h2>
-    <div class="text-block">
-      <p>V okolí Brezno často riešime aj zákazky v lokalitách: Podbrezová • Valaská • Čierny Balog • Heľpa • Bacúch.</p>
-      <p>Každú lokalitu posudzujeme zvlášť, aby sa navrhlo vhodné miesto vrtu, správna technológia a čo najlepší výsledok pre daný pozemok.</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Najčastejšie otázky</h2>
-    <div class="grid-2"></div>
-    <div class="grid-3">
-
-      <div class="faq-item">
-        <h3>Kedy príde obhliadka?</h3>
-        <p>Obhliadku garantujeme do 7 dní od kontaktu, podľa dostupnosti aj skôr.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Ako rýchlo sa vŕta?</h3>
-        <p>Vŕtanie realizujeme do 30 dní od obhliadky, často aj skôr, ak je termín voľný.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Zabezpečíte aj čistenie?</h3>
-        <p>Áno. Robíme čistenie studní, odkalovanie a údržbu prietoku.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Zapojať viete aj čerpadlo?</h3>
-        <p>Áno. Zabezpečujeme aj zapájanie čerpadiel, tlakových nádob a celej technológie.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<section class="section" id="lokality">
+<section class="section">
   <div class="wrap">
-    <h2>Lokalities v okolí Brezno</h2>
-    <div class="link-grid">
-<a class="city-link" href="vrtanie-studni-podbrezova.html"><span>Podbrezová</span><span>→</span></a>
-<a class="city-link" href="vrtanie-studni-valaska.html"><span>Valaská</span><span>→</span></a>
-<a class="city-link" href="vrtanie-studni-cierny-balog.html"><span>Čierny Balog</span><span>→</span></a>
-<a class="city-link" href="vrtanie-studni-helpa.html"><span>Heľpa</span><span>→</span></a>
-<a class="city-link" href="vrtanie-studni-bacuch.html"><span>Bacúch</span><span>→</span></a>
+    <h2>Doklady a legislatíva</h2>
+    <div class="text-block">
+      <p>Do tejto oblasti patria aj lokality Podbrezová, Valaská, Čierny Balog, Heľpa, Bacúch. Všetky riešime podľa rovnakého štandardu: obhliadka do 7 dní, vŕtanie do 30 dní od obhliadky a konečná cena 60€ / meter.</p>
+      <p>Najčastejšie sa rieši list vlastníctva alebo súhlas vlastníka pozemku, situačný nákres a podklady podľa lokality. Podľa územia môže byť potrebné aj ohlásenie alebo povolenie. V prípade zložitejšieho podložia môže byť potrebné doplniť hydrogeologické podklady.</p>
+      <div class="badge-row">
+        <span class="badge">📄 list vlastníctva</span>
+        <span class="badge">🧭 situačný nákres</span>
+        <span class="badge">🏛️ miestny úrad</span>
+        <span class="badge">💧 podklady podľa lokality</span>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="wrap">
+    <h2>Lokality v okrese Brezno</h2>
+    <p class="section-intro">Každá lokalita má vlastnú stránku. To je dobré pre používateľa aj pre lokálne SEO.</p>
+    <div class="link-grid">
+      <a class="city-link" href="vrtanie-studni-podbrezova.html"><span>Podbrezová</span><span>→</span></a><a class="city-link" href="vrtanie-studni-valaska.html"><span>Valaská</span><span>→</span></a><a class="city-link" href="vrtanie-studni-cierny-balog.html"><span>Čierny Balog</span><span>→</span></a><a class="city-link" href="vrtanie-studni-helpa.html"><span>Heľpa</span><span>→</span></a><a class="city-link" href="vrtanie-studni-bacuch.html"><span>Bacúch</span><span>→</span></a>
     </div>
     <div class="badge-row" style="margin-top:18px">
-      <a class="badge" href="index.html" style="text-decoration:none">⬅ späť na hlavnú stránku</a>
-      <span class="badge">💧 konečná cena 60€ / meter</span>
-      <span class="badge">🗓️ obhliadka do 7 dní</span>
+      <a class="badge" href="index.html">🏠 Hlavná stránka</a>
+      <span class="badge">💧 60€ / meter</span>
+      <span class="badge">🗓️ do 7 dní obhliadka</span>
+      <span class="badge">⏱️ do 30 dní vŕtanie</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Fotky a dôvera</h2>
+    <div class="grid-4"><div class="photo-card"><img src="assets/photo-vrtanie.png" alt="Vŕtanie studní v praxi" loading="lazy"><div class="cap">Vŕtanie studní v praxi</div></div><div class="photo-card"><img src="assets/photo-cistenie.png" alt="Čistenie a odkalovanie" loading="lazy"><div class="cap">Čistenie a odkalovanie</div></div><div class="photo-card"><img src="assets/photo-pumpy.png" alt="Zapojenie čerpadla" loading="lazy"><div class="cap">Zapojenie čerpadla</div></div><div class="photo-card"><img src="assets/photo-hotovo.png" alt="Hotová studňa na kľúč" loading="lazy"><div class="cap">Hotová studňa na kľúč</div></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Najčastejšie otázky</h2>
+    <div class="grid-3">
+      <div class="faq-item"><h3>Je cena naozaj 60€ / meter?</h3><p>Áno, komunikujeme ju ako konečnú cenu / meter pri štandardnej ponuke.</p></div>
+      <div class="faq-item"><h3>Čo je v cene?</h3><p>Vysvetlíme, čo zahŕňa obhliadka, návrh riešenia, samotné vŕtanie a ďalšie práce.</p></div>
+      <div class="faq-item"><h3>Robíte aj čistenie a čerpadlá?</h3><p>Áno, práve to je jedna z našich hlavných výhod.</p></div>
     </div>
   </div>
 </section>
@@ -372,5 +267,15 @@ details.district summary::-webkit-details-marker{display:none}
   <a class="btn secondary" href="index.html">🏠 Hlavná</a>
 </div>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Vŕtanie studní Brezno",
+  "telephone":"+421909163189",
+  "areaServed":"Brezno",
+  "description":"Vŕtanie studní, čistenie studní, zapájanie čerpadiel a studne na kľúč."
+}
+</script>
 </body>
 </html>
