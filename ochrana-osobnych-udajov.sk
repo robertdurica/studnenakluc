@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ochrana osobných údajov | Nina-expres s.r.o.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ochrana osobných údajov</h1>
+
+    <p>
+        Spoločnosť <strong>Nina-expres s.r.o.</strong> rešpektuje súkromie svojich zákazníkov a dbá na ochranu osobných údajov v súlade s Nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 (GDPR).
+    </p>
+
+    <h2>1. Prevádzkovateľ</h2>
+    <p>
+        Obchodné meno: Nina-expres s.r.o.<br>
+        Sídlo: Fučiková 1222/16, 962 12 Detva<br>
+        IČO: 51143054<br>
+        DIČ: 2120602748<br>
+        IČ DPH: SK2120602748
+    </p>
+
+    <h2>2. Aké údaje spracúvame</h2>
+    <p>
+        Spracúvame najmä tieto osobné údaje:
+        - meno a priezvisko<br>
+        - adresa<br>
+        - telefónne číslo<br>
+        - e-mail<br>
+        - fakturačné údaje
+    </p>
+
+    <h2>3. Účel spracovania</h2>
+    <p>
+        Osobné údaje spracúvame za účelom:
+        - vybavenia objednávok<br>
+        - komunikácie so zákazníkmi<br>
+        - plnenia zákonných povinností (účtovníctvo, dane)<br>
+        - marketingu (len so súhlasom)
+    </p>
+
+    <h2>4. Právny základ</h2>
+    <p>
+        Spracovanie je založené na:
+        - plnení zmluvy<br>
+        - zákonnej povinnosti<br>
+        - súhlase dotknutej osoby
+    </p>
+
+    <h2>5. Doba uchovávania údajov</h2>
+    <p>
+        Údaje uchovávame po dobu nevyhnutnú na splnenie účelu alebo podľa zákonných lehôt (napr. 10 rokov pre účtovné doklady).
+    </p>
+
+    <h2>6. Práva dotknutej osoby</h2>
+    <p>
+        Máte právo:
+        - na prístup k údajom<br>
+        - na opravu údajov<br>
+        - na vymazanie údajov<br>
+        - na obmedzenie spracovania<br>
+        - namietať spracovanie<br>
+        - podať sťažnosť na Úrad na ochranu osobných údajov
+    </p>
+
+    <h2>7. Prenos údajov</h2>
+    <p>
+        Osobné údaje neposkytujeme tretím stranám okrem prípadov, keď je to nevyhnutné (napr. kuriérske služby, účtovník).
+    </p>
+
+    <h2>8. Kontakt</h2>
+    <p>
+        V prípade otázok nás môžete kontaktovať na e-mailovej adrese: <br>
+        <strong>studnedetva@gmail.com</strong>
+    </p>
+
+</div>
+
+</body>
+</html>
